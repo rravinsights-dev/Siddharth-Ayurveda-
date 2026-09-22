@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth Ayurveda - Saktivarddhak Capsule</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1b4332;
+            --primary-light: #2d6a4f;
+            --accent-gold: #d4af37;
+            --accent-orange: #e76f51;
+            --purple-accent: #5e2d79;
+            --bg-light: #f4f7f5;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #111e17, var(--primary), #111e17);
+            color: #ffd700;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 20px;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .brand-text h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .brand-text span {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .header-cta-btn {
+            background: var(--accent-gold);
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: transform 0.2s ease, background 0.2s ease;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .header-cta-btn:hover {
+            transform: translateY(-2px);
+            background: #c5a028;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #112a20 0%, #1b4332 50%, #2d6a4f 100%);
+            color: var(--white);
+            padding: 50px 20px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .hero-title span {
+            color: var(--accent-gold);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #d1e7dd;
+            margin-bottom: 25px;
+        }
+
+        .hero-bullets {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .hero-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .hero-bullets i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            background: rgba(212, 175, 55, 0.15);
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .product-visual-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-card-preview {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            width: 100%;
+            max-width: 440px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+
+        .badge-100-ayurvedic {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981, #047857);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-md);
+            text-transform: uppercase;
+        }
+
+        .product-svg-container {
+            width: 100%;
+            max-width: 260px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-price-tag {
+            background: rgba(0,0,0,0.3);
+            border-radius: var(--radius-md);
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            border: 1px dashed rgba(212, 175, 55, 0.4);
+        }
+
+        .price-item span {
+            display: block;
+            font-size: 0.75rem;
+            color: #a3b18a;
+            text-transform: uppercase;
+        }
+
+        .price-item strong {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .price-item.mrp strong {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+        }
+
+        /* Feature Cards */
+        .features-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-header h2 {
+            font-size: 2.1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #e8f5e9;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 18px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: #edf4f0;
+            padding: 60px 20px;
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .review-card i.quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: #cbd5e1;
+            opacity: 0.5;
+        }
+
+        .rating-stars {
+            color: #fbbf24;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            font-size: 0.93rem;
+            color: #334155;
+            margin-bottom: 18px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 12px;
+        }
+
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .reviewer-details h4 {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .reviewer-details span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .verified-badge {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        /* Order Form Section */
+        .order-section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .order-wrapper {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            border: 2px solid #e2e8f0;
+        }
+
+        .order-summary-panel {
+            background: linear-gradient(180deg, #1b4332 0%, #112a20 100%);
+            color: var(--white);
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .summary-header h3 {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .product-mini-detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+            background: rgba(255,255,255,0.08);
+            padding: 15px;
+            border-radius: var(--radius-md);
+        }
+
+        .product-mini-detail svg {
+            width: 70px;
+            height: 90px;
+        }
+
+        .mini-info h4 {
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .mini-info p {
+            font-size: 0.8rem;
+            color: #a3b18a;
+        }
+
+        .price-breakdown {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 15px;
+        }
+
+        .row-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .row-item.total {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            border-top: 1px dashed rgba(255,255,255,0.2);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .order-form-panel {
+            padding: 40px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #e76f51, #d9381e);
+            color: var(--white);
+            border: none;
+            padding: 16px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(231, 111, 81, 0.4);
+            transition: transform 0.2s ease, background 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #d9381e, #c0260f);
+        }
+
+        /* Countdown & Urgency */
+        .urgency-box {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            padding: 10px 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 0.88rem;
+            color: #856404;
+            font-weight: 600;
+        }
+
+        /* Sticky Bottom Bar */
+        .sticky-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .sticky-price-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sticky-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .sticky-mrp {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .sticky-btn {
+            background: linear-gradient(135deg, #10b981, #047857);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1b14;
+            color: #94a3b8;
+            padding: 40px 20px 100px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Success Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .success-icon {
+            width: 70px;
+            height: 70px;
+            background: #d1fae5;
+            color: #059669;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-bullets li {
+                justify-content: center;
+            }
+
+            .order-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .product-card-preview {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.65rem;
+            }
+
+            .submit-btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement -->
+    <div class="announcement-bar">
+        ⚡ SPECIAL AYURVEDIC OFFER: 100% Pure Organic Formula • FREE Cash on Delivery All Over India
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <!-- SVG Logo for Siddharth Ayurveda -->
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" fill="#1b4332" stroke="#d4af37" stroke-width="3"/>
+                    <path d="M50 20 C40 35, 25 45, 25 60 C25 75, 38 82, 50 82 C62 82, 75 75, 75 60 C75 45, 60 35, 50 20 Z" fill="#2d6a4f"/>
+                    <path d="M50 20 C50 40, 65 50, 65 62 C65 72, 58 78, 50 80" stroke="#d4af37" stroke-width="2" fill="none"/>
+                    <path d="M35 55 Q 50 45 65 55" stroke="#ffffff" stroke-width="2" fill="none"/>
+                    <circle cx="50" cy="38" r="4" fill="#d4af37"/>
+                </svg>
+                <div class="brand-text">
+                    <h1>Siddharth Ayurveda</h1>
+                    <span>Pure • Natural • Authentic</span>
+                </div>
+            </a>
+            <a href="#order-form" class="header-cta-btn">Buy Now @ ₹1,999</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-leaf"></i> 100% Herbal & Safe Formulation
+                </div>
+                <h1 class="hero-title">Restore Ultimate <span>Energy, Stamina & Vitality</span> Naturally</h1>
+                <p class="hero-subtitle">Saktivarddhak Capsule (Men-O-Power) is a premier Ayurvedic blend designed to boost physical endurance, strength, and immunity.</p>
+                
+                <ul class="hero-bullets">
+                    <li><i class="fa-solid fa-bolt"></i> Boosts Daily Energy & Overall Stamina</li>
+                    <li><i class="fa-solid fa-shield-halved"></i> Power Antioxidant & Immunity Booster</li>
+                    <li><i class="fa-solid fa-person-running"></i> Reduces Daily Fatigue & Muscle Stress</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Zero Side Effects • 100% Doctor Approved</li>
+                </ul>
+
+                <a href="#order-form" class="header-cta-btn" style="padding: 16px 36px; font-size: 1.1rem; display: inline-block;">
+                    <i class="fa-solid fa-cart-shopping"></i> Order Now @ ₹1,999 Only
+                </a>
+            </div>
+
+            <!-- Product Bottle Display -->
+            <div class="product-visual-wrapper">
+                <div class="product-card-preview">
+                    <div class="badge-100-ayurvedic">100% Ayurvedic</div>
+                    
+                    <div class="product-svg-container">
+                        <!-- SVG Rendered Bottle Mockup -->
+                        <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+                            <!-- Cap -->
+                            <rect x="100" y="20" width="100" height="40" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+                            <rect x="105" y="50" width="90" height="15" fill="#e2e8f0"/>
+                            <!-- Neck -->
+                            <rect x="110" y="65" width="80" height="20" fill="#f1f5f9"/>
+                            <!-- Main Body -->
+                            <rect x="50" y="85" width="200" height="300" rx="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+                            
+                            <!-- Label Area -->
+                            <rect x="55" y="110" width="190" height="250" fill="#ffffff"/>
+                            
+                            <!-- Label Top Green Header -->
+                            <rect x="55" y="110" width="190" height="45" fill="#1b4332"/>
+                            <text x="150" y="132" fill="#ffffff" font-family="Cinzel" font-size="11" font-weight="bold" text-anchor="middle">SIDDHARTH AYURVEDA</text>
+                            <text x="150" y="146" fill="#d4af37" font-family="Poppins" font-size="7" text-anchor="middle">PURE HERBAL FORMULATION</text>
+                            
+                            <!-- Main Brand Title -->
+                            <text x="150" y="185" fill="#dc2626" font-family="Poppins" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="0.5">SAKTIVARDDHAK</text>
+                            <text x="150" y="202" fill="#1e293b" font-family="Poppins" font-size="10" font-weight="bold" text-anchor="middle">(MEN-O-POWER CAPSULE)</text>
+                            <text x="150" y="217" fill="#475569" font-family="Poppins" font-size="8" text-anchor="middle">Immunity Booster & Antioxidant</text>
+                            
+                            <!-- Purple Muscle Graphics Section -->
+                            <rect x="55" y="230" width="190" height="120" fill="#5e2d79"/>
+                            <path d="M130 250 C120 250 110 260 110 275 C110 295 130 310 150 325 C170 310 190 295 190 275 C190 260 180 250 170 250 C160 250 152 258 150 262 C148 258 140 250 130 250 Z" fill="#ffffff" opacity="0.2"/>
+                            <circle cx="150" cy="280" r="25" fill="#d4af37" opacity="0.3"/>
+                            <path d="M140 280 L148 288 L162 272" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                            <text x="150" y="320" fill="#ffffff" font-family="Poppins" font-size="11" font-weight="bold" text-anchor="middle">POWER & STAMINA</text>
+                        </svg>
+                    </div>
+
+                    <div class="hero-price-tag">
+                        <div class="price-item mrp">
+                            <span>MRP</span>
+                            <strong>₹2,999</strong>
+                        </div>
+                        <div class="price-item">
+                            <span>Offer Price</span>
+                            <strong>₹1,999</strong>
+                        </div>
+                        <div class="price-item" style="color: #10b981;">
+                            <span>Discount</span>
+                            <strong style="color:#10b981;">SAVE ₹1,000</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="section-header">
+            <h2>Why Choose Siddharth Ayurveda?</h2>
+            <p>Formulated with traditional botanical ingredients and modern quality standards.</p>
+        </div>
+
+        <div class="grid-4">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>100% Ayurvedic</h3>
+                <p>Made from pure herbal extract extracts without any chemical additives or synthetic hormones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                <h3>Enhanced Stamina</h3>
+                <p>Helps overcome physical fatigue, weakness, and boosts day-long power & confidence.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>Immunity & Vitality</h3>
+                <p>Powerful antioxidant formula that strengthens body defense mechanisms naturally.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3>Free Fast Delivery</h3>
+                <p>Discreet packaging delivered right to your doorstep with Cash on Delivery options.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Customer Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-container">
+            <div class="section-header">
+                <h2>Real Customer Feedback</h2>
+                <p>Asli Anubhav | Asli Result - See what our verified users have to say</p>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Shadi ke baad se kamjori feel ho rahi thi, lekin is capsule ko lene ke baad ab pehle se zyada energy feel hoti hai."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">RS</div>
+                        <div class="reviewer-details">
+                            <h4>Rohit Sharma</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Noida, UP • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Bahut hi asardar product hai! 2 hafte me hi fark feel hua. Ab stamina aur confidence dono behtar hain."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">AK</div>
+                        <div class="reviewer-details">
+                            <h4>Amit Kumar</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Ghaziabad, UP • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Maine kai products try kiye, lekin Saktivarddhak jaisa natural aur effective kuch nahi mila. Ab me regular le raha hu."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">SY</div>
+                        <div class="reviewer-details">
+                            <h4>Suresh Yadav</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Delhi • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Iska koi side effect nahi hai aur energy bhi achhi milti hai. Office work aur gym dono me madad mil rahi hai."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">VS</div>
+                        <div class="reviewer-details">
+                            <h4>Vikash Singh</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Lucknow, UP • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Saktivarddhak capsule ne meri stamina aur energy ko kafi badhaya hai. Main ise apne dosto ko bhi suggest karta hu."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">PK</div>
+                        <div class="reviewer-details">
+                            <h4>Pawan Kumar</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Patna, Bihar • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Ayurvedic hone ke karan main ise bina kisi jhijhak ke leta hu. Ab thakan kam lagti hai aur urja bani rehti hai."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">MT</div>
+                        <div class="reviewer-details">
+                            <h4>Mahesh Tiwari</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Jaipur, Rajasthan • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Gym me performance behtar hua hai aur rozmarra ki activity me bhi energy bani rehti hai. Product waakai kamal hai."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">SK</div>
+                        <div class="reviewer-details">
+                            <h4>Sahil Khan</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Bhopal, MP • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 8 -->
+                <div class="review-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"5 din me hi body me feel alag laga! Ab main pehle se zyada fit aur active feel karta hu."</p>
+                    <div class="reviewer-info">
+                        <div class="avatar">AV</div>
+                        <div class="reviewer-details">
+                            <h4>Ankit Verma</h4>
+                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Kanpur, UP • Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="order-section" id="order-form">
+        <div class="section-header">
+            <h2>Place Your Order Now</h2>
+            <p>Fill out the form below for Cash on Delivery (COD) Order Confirmation</p>
+        </div>
+
+        <div class="order-wrapper">
+            <!-- Left Order Summary -->
+            <div class="order-summary-panel">
+                <div class="summary-header">
+                    <h3>Order Summary</h3>
+                    <p style="color:#a3b18a; font-size:0.85rem;">Siddharth Ayurveda Official Store</p>
+                </div>
+
+                <div class="product-mini-detail">
+                    <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="100" y="20" width="100" height="40" rx="8" fill="#f8fafc"/>
+                        <rect x="50" y="85" width="200" height="300" rx="30" fill="#ffffff"/>
+                        <rect x="55" y="110" width="190" height="45" fill="#1b4332"/>
+                        <text x="150" y="138" fill="#ffffff" font-size="12" text-anchor="middle" font-weight="bold">SIDDHARTH</text>
+                        <rect x="55" y="230" width="190" height="120" fill="#5e2d79"/>
+                    </svg>
+                    <div class="mini-info">
+                        <h4>Saktivarddhak Capsule</h4>
+                        <p>1 Month Pack (60 Capsules)</p>
+                        <span style="color:#d4af37; font-weight:700; font-size:0.85rem;">★ 4.9/5 Rating</span>
+                    </div>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="row-item">
+                        <span>Original Price (MRP)</span>
+                        <span><del>₹2,999</del></span>
+                    </div>
+                    <div class="row-item">
+                        <span>Special Offer Discount</span>
+                        <span style="color:#10b981;">- ₹1,000</span>
+                    </div>
+                    <div class="row-item">
+                        <span>Delivery Charges</span>
+                        <span style="color:#10b981; font-weight:700;">FREE (COD)</span>
+                    </div>
+                    <div class="row-item total">
+                        <span>Total Payable</span>
+                        <span>₹1,999</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="order-form-panel">
+                <div class="urgency-box">
+                    <i class="fa-solid fa-clock"></i> Offer ends in <span id="timer">14:59</span> mins! Limited stock available.
+                </div>
+
+                <form id="checkout-form" onsubmit="handleOrderSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullname">Full Name (पूरा नाम)</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile Number (मोबाइल नंबर)</label>
+                        <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Full Delivery Address (पूरा पता)</label>
+                        <textarea id="address" rows="3" placeholder="House No., Street Name, Area, Landmark" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pincode">Pincode (पिनकोड)</label>
+                        <input type="text" id="pincode" pattern="[0-9]{6}" placeholder="6-digit pincode" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <input type="text" value="Cash on Delivery (COD) - Pay when received" readonly style="background:#f1f5f9; cursor:not-allowed; font-weight:600;">
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-lock"></i> CONFIRM ORDER - ₹1,999
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Siddharth Ayurveda</strong> - Pure Ayurveda | Better Health | Stronger You</p>
+        <p>Disclaimer: Results may vary from person to person. Always follow recommended dosage.</p>
+        <p>&copy; 2026 Siddharth Ayurveda. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Sticky Bottom Bar -->
+    <div class="sticky-bottom-bar">
+        <div class="sticky-price-info">
+            <span class="sticky-price">₹1,999</span>
+            <span class="sticky-mrp">₹2,999</span>
+        </div>
+        <a href="#order-form" class="sticky-btn">
+            <i class="fa-solid fa-bolt"></i> Order Now
+        </a>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-card">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 style="font-size:1.5rem; color:var(--primary); margin-bottom:10px;">Order Confirmed!</h3>
+            <p style="color:var(--text-muted); margin-bottom:20px;">Thank you for ordering with Siddharth Ayurveda. Our representative will call you shortly to verify your delivery address.</p>
+            <button onclick="closeModal()" class="submit-btn" style="padding:12px 24px;">Done</button>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let fifteenMinutes = 60 * 15,
+                display = document.querySelector('#timer');
+            startTimer(fifteenMinutes, display);
+        };
+
+        // Form Submit
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+            document.getElementById('success-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').style.display = 'none';
+            document.getElementById('checkout-form').reset();
+        }
+    </script>
+</body>
+</html>
