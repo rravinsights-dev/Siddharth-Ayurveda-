@@ -41,7 +41,6 @@
             padding-bottom: 90px;
         }
 
-        /* Top Announcement Bar */
         .announcement-bar {
             background: linear-gradient(90deg, #111e17, var(--primary), #111e17);
             color: #ffd700;
@@ -52,7 +51,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Header */
         header {
             background: var(--white);
             box-shadow: var(--shadow-sm);
@@ -100,7 +98,6 @@
             background: #c5a028;
         }
 
-        /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, #112a20 0%, #1b4332 50%, #2d6a4f 100%);
             color: var(--white);
@@ -241,7 +238,6 @@
             text-decoration: line-through;
         }
 
-        /* Feature Cards */
         .features-section {
             padding: 60px 20px;
             max-width: 1200px;
@@ -310,7 +306,6 @@
             color: var(--text-muted);
         }
 
-        /* Reviews Section */
         .reviews-section {
             background: #edf4f0;
             padding: 60px 20px;
@@ -402,7 +397,6 @@
             font-weight: 600;
         }
 
-        /* Order Form Section */
         .order-section {
             padding: 60px 20px;
             max-width: 1000px;
@@ -498,14 +492,13 @@
             margin-bottom: 6px;
         }
 
-        .form-group input, .form-group textarea, .form-group select {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px 15px;
             border: 1.5px solid #cbd5e1;
             border-radius: var(--radius-sm);
             font-size: 0.95rem;
             outline: none;
-            transition: border-color 0.2s;
         }
 
         .form-group input:focus, .form-group textarea:focus {
@@ -523,19 +516,12 @@
             font-weight: 700;
             cursor: pointer;
             box-shadow: 0 8px 20px rgba(231, 111, 81, 0.4);
-            transition: transform 0.2s ease, background 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #d9381e, #c0260f);
-        }
-
-        /* Countdown & Urgency */
         .urgency-box {
             background: #fff8e1;
             border: 1px solid #ffe082;
@@ -548,7 +534,6 @@
             font-weight: 600;
         }
 
-        /* Sticky Bottom Bar */
         .sticky-bottom-bar {
             position: fixed;
             bottom: 0;
@@ -596,7 +581,6 @@
             gap: 8px;
         }
 
-        /* Footer */
         footer {
             background: #0d1b14;
             color: #94a3b8;
@@ -605,49 +589,6 @@
             font-size: 0.85rem;
         }
 
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        /* Success Modal */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            padding: 20px;
-        }
-
-        .modal-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 40px 30px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .success-icon {
-            width: 70px;
-            height: 70px;
-            background: #d1fae5;
-            color: #059669;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 20px;
-        }
-
-        /* Responsive Media Queries */
         @media (max-width: 900px) {
             .hero-container {
                 grid-template-columns: 1fr;
@@ -665,46 +606,25 @@
             .hero-title {
                 font-size: 2rem;
             }
-
-            .product-card-preview {
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .hero-title {
-                font-size: 1.65rem;
-            }
-
-            .submit-btn {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Announcement -->
     <div class="announcement-bar">
         ⚡ SPECIAL AYURVEDIC OFFER: 100% Pure Organic Formula • FREE Cash on Delivery All Over India
     </div>
 
-    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="#" class="brand-logo">
-                <img src="./WhatsApp Image 2026-09-21 at 13.09.30.jpeg" alt="Siddharth Ayurveda Logo" class="logo-img">
+                <!-- Relative path for GitHub repository -->
+                <img src="./ChatGPT Image Sep 22, 2026, 02_56_48 PM.png" alt="Siddharth Ayurveda Logo" class="logo-img">
             </a>
             <a href="#order-form" class="header-cta-btn">Buy Now @ ₹1,999</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
@@ -726,12 +646,11 @@
                 </a>
             </div>
 
-            <!-- Product Bottle Display -->
             <div class="product-visual-wrapper">
                 <div class="product-card-preview">
                     <div class="badge-100-ayurvedic">100% Ayurvedic</div>
-                    
-                    <img src="./SAKTIVARDDHAK CAPSULE (1).png" alt="Saktivarddhak Capsule Bottle" class="hero-product-img">
+                    <!-- Relative path for GitHub repository -->
+                    <img src="./ChatGPT Image Sep 22, 2026, 02_54_47 PM.png" alt="Saktivarddhak Capsule Bottle" class="hero-product-img">
 
                     <div class="hero-price-tag">
                         <div class="price-item mrp">
@@ -752,178 +671,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="section-header">
-            <h2>Why Choose Siddharth Ayurveda?</h2>
-            <p>Formulated with traditional botanical ingredients and modern quality standards.</p>
-        </div>
-
-        <div class="grid-4">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-                <h3>100% Ayurvedic</h3>
-                <p>Made from pure herbal extract extracts without any chemical additives or synthetic hormones.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-dumbbell"></i></div>
-                <h3>Enhanced Stamina</h3>
-                <p>Helps overcome physical fatigue, weakness, and boosts day-long power & confidence.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                <h3>Immunity & Vitality</h3>
-                <p>Powerful antioxidant formula that strengthens body defense mechanisms naturally.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                <h3>Free Fast Delivery</h3>
-                <p>Discreet packaging delivered right to your doorstep with Cash on Delivery options.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Real Customer Reviews Section -->
-    <section class="reviews-section" id="reviews">
-        <div class="reviews-container">
-            <div class="section-header">
-                <h2>Real Customer Feedback</h2>
-                <p>Asli Anubhav | Asli Result - See what our verified users have to say</p>
-            </div>
-
-            <div class="reviews-grid">
-                <!-- Review 1 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Shadi ke baad se kamjori feel ho rahi thi, lekin is capsule ko lene ke baad ab pehle se zyada energy feel hoti hai."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">RS</div>
-                        <div class="reviewer-details">
-                            <h4>Rohit Sharma</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Noida, UP • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Bahut hi asardar product hai! 2 hafte me hi fark feel hua. Ab stamina aur confidence dono behtar hain."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">AK</div>
-                        <div class="reviewer-details">
-                            <h4>Amit Kumar</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Ghaziabad, UP • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Maine kai products try kiye, lekin Saktivarddhak jaisa natural aur effective kuch nahi mila. Ab me regular le raha hu."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">SY</div>
-                        <div class="reviewer-details">
-                            <h4>Suresh Yadav</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Delhi • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 4 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Iska koi side effect nahi hai aur energy bhi achhi milti hai. Office work aur gym dono me madad mil rahi hai."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">VS</div>
-                        <div class="reviewer-details">
-                            <h4>Vikash Singh</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Lucknow, UP • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 5 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Saktivarddhak capsule ne meri stamina aur energy ko kafi badhaya hai. Main ise apne dosto ko bhi suggest karta hu."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">PK</div>
-                        <div class="reviewer-details">
-                            <h4>Pawan Kumar</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Patna, Bihar • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 6 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Ayurvedic hone ke karan main ise bina kisi jhijhak ke leta hu. Ab thakan kam lagti hai aur urja bani rehti hai."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">MT</div>
-                        <div class="reviewer-details">
-                            <h4>Mahesh Tiwari</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Jaipur, Rajasthan • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 7 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Gym me performance behtar hua hai aur rozmarra ki activity me bhi energy bani rehti hai. Product waakai kamal hai."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">SK</div>
-                        <div class="reviewer-details">
-                            <h4>Sahil Khan</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Bhopal, MP • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 8 -->
-                <div class="review-card">
-                    <i class="fa-solid fa-quote-right quote-icon"></i>
-                    <div class="rating-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"5 din me hi body me feel alag laga! Ab main pehle se zyada fit aur active feel karta hu."</p>
-                    <div class="reviewer-info">
-                        <div class="avatar">AV</div>
-                        <div class="reviewer-details">
-                            <h4>Ankit Verma</h4>
-                            <span><i class="fa-solid fa-circle-check verified-badge"></i> Kanpur, UP • Verified Buyer</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- Order Form Section -->
     <section class="order-section" id="order-form">
         <div class="section-header">
@@ -932,7 +679,6 @@
         </div>
 
         <div class="order-wrapper">
-            <!-- Left Order Summary -->
             <div class="order-summary-panel">
                 <div class="summary-header">
                     <h3>Order Summary</h3>
@@ -940,7 +686,7 @@
                 </div>
 
                 <div class="product-mini-detail">
-                    <img src="./SAKTIVARDDHAK CAPSULE (1).png" alt="Saktivarddhak Bottle">
+                    <img src="./ChatGPT Image Sep 22, 2026, 02_54_47 PM.png" alt="Saktivarddhak Bottle">
                     <div class="mini-info">
                         <h4>Saktivarddhak Capsule</h4>
                         <p>1 Month Pack (60 Capsules)</p>
@@ -968,13 +714,12 @@
                 </div>
             </div>
 
-            <!-- Right Form -->
             <div class="order-form-panel">
                 <div class="urgency-box">
-                    <i class="fa-solid fa-clock"></i> Offer ends in <span id="timer">14:59</span> mins! Limited stock available.
+                    <i class="fa-solid fa-clock"></i> Offer ends in 14:59 mins! Limited stock available.
                 </div>
 
-                <form id="checkout-form" onsubmit="handleOrderSubmit(event)">
+                <form id="checkout-form">
                     <div class="form-group">
                         <label for="fullname">Full Name (पूरा नाम)</label>
                         <input type="text" id="fullname" placeholder="Enter your full name" required>
@@ -995,11 +740,6 @@
                         <input type="text" id="pincode" pattern="[0-9]{6}" placeholder="6-digit pincode" required>
                     </div>
 
-                    <div class="form-group">
-                        <label>Payment Method</label>
-                        <input type="text" value="Cash on Delivery (COD) - Pay when received" readonly style="background:#f1f5f9; cursor:not-allowed; font-weight:600;">
-                    </div>
-
                     <button type="submit" class="submit-btn">
                         <i class="fa-solid fa-lock"></i> CONFIRM ORDER - ₹1,999
                     </button>
@@ -1008,14 +748,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p><strong>Siddharth Ayurveda</strong> - Pure Ayurveda | Better Health | Stronger You</p>
-        <p>Disclaimer: Results may vary from person to person. Always follow recommended dosage.</p>
         <p>&copy; 2026 Siddharth Ayurveda. All Rights Reserved.</p>
     </footer>
 
-    <!-- Sticky Bottom Bar -->
     <div class="sticky-bottom-bar">
         <div class="sticky-price-info">
             <span class="sticky-price">₹1,999</span>
@@ -1025,54 +762,5 @@
             <i class="fa-solid fa-bolt"></i> Order Now
         </a>
     </div>
-
-    <!-- Order Success Modal -->
-    <div class="modal-overlay" id="success-modal">
-        <div class="modal-card">
-            <div class="success-icon">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <h3 style="font-size:1.5rem; color:var(--primary); margin-bottom:10px;">Order Confirmed!</h3>
-            <p style="color:var(--text-muted); margin-bottom:20px;">Thank you for ordering with Siddharth Ayurveda. Our representative will call you shortly to verify your delivery address.</p>
-            <button onclick="closeModal()" class="submit-btn" style="padding:12px 24px;">Done</button>
-        </div>
-    </div>
-
-    <script>
-        // Countdown Timer
-        function startTimer(duration, display) {
-            let timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = duration;
-                }
-            }, 1000);
-        }
-
-        window.onload = function () {
-            let fifteenMinutes = 60 * 15,
-                display = document.querySelector('#timer');
-            startTimer(fifteenMinutes, display);
-        };
-
-        // Form Submit
-        function handleOrderSubmit(event) {
-            event.preventDefault();
-            document.getElementById('success-modal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('success-modal').style.display = 'none';
-            document.getElementById('checkout-form').reset();
-        }
-    </script>
 </body>
 </html>
