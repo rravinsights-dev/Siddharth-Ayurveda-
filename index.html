@@ -352,7 +352,7 @@
         }
 
         .row-item.total {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: var(--accent-gold);
             border-top: 1px dashed rgba(255,255,255,0.2);
@@ -407,6 +407,8 @@
             justify-content: center;
             gap: 8px;
             margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .urgency-box {
@@ -474,13 +476,24 @@
             color: #94a3b8;
             padding: 25px 16px 85px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #ffffff;
         }
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
             .logo-img {
-                height: 52px; /* Prominent Logo on Mobile */
+                height: 52px;
             }
 
             .hero-container {
@@ -567,12 +580,12 @@
             }
 
             .row-item {
-                display: none; /* Hide non-essential pricing breakdown on mobile */
+                display: none;
             }
 
             .row-item.total {
                 display: flex;
-                font-size: 1rem;
+                font-size: 0.95rem;
                 margin-top: 0;
                 padding-top: 0;
                 border-top: none;
@@ -703,7 +716,7 @@
                         <span style="color:#10b981; font-weight:700;">FREE (COD)</span>
                     </div>
                     <div class="row-item total">
-                        <span>Total Payable (COD):</span>
+                        <span>⚡ ORDER NOW (CASH ON DELIVERY)</span>
                         <span>₹1,999</span>
                     </div>
                 </div>
@@ -737,7 +750,7 @@
                     </div>
 
                     <button type="submit" class="submit-btn">
-                        <i class="fa-solid fa-lock"></i> CONFIRM ORDER - ₹1,999
+                        <i class="fa-solid fa-paper-plane"></i> SUBMIT NOW
                     </button>
                 </form>
             </div>
@@ -747,6 +760,9 @@
     <footer>
         <p><strong>Siddharth Ayurveda</strong> - Pure Organic Ayurveda</p>
         <p>&copy; 2026 Siddharth Ayurveda. All Rights Reserved.</p>
+        <p style="margin-top: 6px; font-size: 0.78rem;">
+            Ads and Landing page by <a href="https://www.instagram.com/_theadsguru.in/" target="_blank" rel="noopener noreferrer">TheAdsGuru Advertising and Marketing Agency</a>
+        </p>
     </footer>
 
     <!-- Sticky Bottom Mobile Bar -->
