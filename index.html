@@ -533,7 +533,6 @@
                 order: 4;
             }
 
-            /* Compact Mobile Order Summary */
             .order-wrapper {
                 grid-template-columns: 1fr;
             }
@@ -604,7 +603,7 @@
         ⚡ SPECIAL OFFER: 100% Ayurvedic • Free Cash on Delivery
     </div>
 
-    <!-- Header (White Background & Larger Logo) -->
+    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="#" class="brand-logo">
@@ -614,7 +613,7 @@
         </div>
     </header>
 
-    <!-- Hero Section (Purple Theme) -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-container">
             
@@ -627,7 +626,6 @@
                 
                 <p class="hero-subtitle">Saktivarddhak Capsule (Men-O-Power) is designed to boost physical endurance, strength & vital power.</p>
 
-                <!-- Clean 2x2 Feature Highlights -->
                 <div class="feature-grid-mini">
                     <div class="feature-mini-item">
                         <i class="fa-solid fa-bolt"></i>
@@ -652,7 +650,6 @@
                 </a>
             </div>
 
-            <!-- Product Visual Card -->
             <div class="product-visual-wrapper">
                 <div class="product-card-preview">
                     <div class="badge-100-ayurvedic">100% Ayurvedic</div>
@@ -679,7 +676,7 @@
         </div>
     </section>
 
-    <!-- Compact Order Form Section -->
+    <!-- Order Form Section -->
     <section class="order-section" id="order-form">
         <div class="section-header">
             <h2>Place Your Order Now</h2>
@@ -687,7 +684,6 @@
         </div>
 
         <div class="order-wrapper">
-            <!-- Compact Order Summary Panel -->
             <div class="order-summary-panel">
                 <div class="summary-header">
                     <h3>Order Summary</h3>
@@ -728,25 +724,25 @@
                     <i class="fa-solid fa-clock"></i> Limited Stock! Free Cash on Delivery.
                 </div>
 
-                <form id="checkout-form" onsubmit="handleSubmit(event)">
+                <form id="checkout-form" action="thank-you.html" method="GET">
                     <div class="form-group">
                         <label for="fullname">Full Name (पूरा नाम)</label>
-                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Mobile Number (मोबाइल नंबर)</label>
-                        <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
                     </div>
 
                     <div class="form-group">
                         <label for="address">Full Delivery Address (पूरा पता)</label>
-                        <textarea id="address" rows="2" placeholder="House No., Area, Landmark" required></textarea>
+                        <textarea id="address" name="address" rows="2" placeholder="House No., Area, Landmark" required></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="pincode">Pincode (पिनकोड)</label>
-                        <input type="text" id="pincode" pattern="[0-9]{6}" placeholder="6-digit pincode" required>
+                        <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" placeholder="6-digit pincode" required>
                     </div>
 
                     <button type="submit" class="submit-btn">
@@ -775,14 +771,6 @@
             <i class="fa-solid fa-bolt"></i> Order Now
         </a>
     </div>
-
-    <!-- Script for Redirecting Form Submission to thank-you.html -->
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            window.location.href = "thank-you.html";
-        }
-    </script>
 
 </body>
 </html>
