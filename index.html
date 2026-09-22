@@ -77,25 +77,10 @@
             text-decoration: none;
         }
 
-        .logo-svg {
-            width: 48px;
-            height: 48px;
-        }
-
-        .brand-text h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.35rem;
-            color: var(--primary);
-            line-height: 1.1;
-            font-weight: 700;
-        }
-
-        .brand-text span {
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 600;
+        .logo-img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
         }
 
         .header-cta-btn {
@@ -193,9 +178,9 @@
         }
 
         .product-card-preview {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.08);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: var(--radius-lg);
             padding: 30px;
             width: 100%;
@@ -219,10 +204,12 @@
             text-transform: uppercase;
         }
 
-        .product-svg-container {
+        .hero-product-img {
+            max-width: 280px;
             width: 100%;
-            max-width: 260px;
-            margin: 0 auto 20px;
+            height: auto;
+            margin: 0 auto 15px;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
         }
 
         .hero-price-tag {
@@ -457,9 +444,10 @@
             border-radius: var(--radius-md);
         }
 
-        .product-mini-detail svg {
+        .product-mini-detail img {
             width: 70px;
-            height: 90px;
+            height: auto;
+            object-fit: contain;
         }
 
         .mini-info h4 {
@@ -688,7 +676,7 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            
+
             .hero-title {
                 font-size: 1.65rem;
             }
@@ -710,18 +698,7 @@
     <header>
         <div class="header-container">
             <a href="#" class="brand-logo">
-                <!-- SVG Logo for Siddharth Ayurveda -->
-                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="46" fill="#1b4332" stroke="#d4af37" stroke-width="3"/>
-                    <path d="M50 20 C40 35, 25 45, 25 60 C25 75, 38 82, 50 82 C62 82, 75 75, 75 60 C75 45, 60 35, 50 20 Z" fill="#2d6a4f"/>
-                    <path d="M50 20 C50 40, 65 50, 65 62 C65 72, 58 78, 50 80" stroke="#d4af37" stroke-width="2" fill="none"/>
-                    <path d="M35 55 Q 50 45 65 55" stroke="#ffffff" stroke-width="2" fill="none"/>
-                    <circle cx="50" cy="38" r="4" fill="#d4af37"/>
-                </svg>
-                <div class="brand-text">
-                    <h1>Siddharth Ayurveda</h1>
-                    <span>Pure • Natural • Authentic</span>
-                </div>
+                <img src="./WhatsApp Image 2026-09-21 at 13.09.30.jpeg" alt="Siddharth Ayurveda Logo" class="logo-img">
             </a>
             <a href="#order-form" class="header-cta-btn">Buy Now @ ₹1,999</a>
         </div>
@@ -754,38 +731,7 @@
                 <div class="product-card-preview">
                     <div class="badge-100-ayurvedic">100% Ayurvedic</div>
                     
-                    <div class="product-svg-container">
-                        <!-- SVG Rendered Bottle Mockup -->
-                        <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
-                            <!-- Cap -->
-                            <rect x="100" y="20" width="100" height="40" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
-                            <rect x="105" y="50" width="90" height="15" fill="#e2e8f0"/>
-                            <!-- Neck -->
-                            <rect x="110" y="65" width="80" height="20" fill="#f1f5f9"/>
-                            <!-- Main Body -->
-                            <rect x="50" y="85" width="200" height="300" rx="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
-                            
-                            <!-- Label Area -->
-                            <rect x="55" y="110" width="190" height="250" fill="#ffffff"/>
-                            
-                            <!-- Label Top Green Header -->
-                            <rect x="55" y="110" width="190" height="45" fill="#1b4332"/>
-                            <text x="150" y="132" fill="#ffffff" font-family="Cinzel" font-size="11" font-weight="bold" text-anchor="middle">SIDDHARTH AYURVEDA</text>
-                            <text x="150" y="146" fill="#d4af37" font-family="Poppins" font-size="7" text-anchor="middle">PURE HERBAL FORMULATION</text>
-                            
-                            <!-- Main Brand Title -->
-                            <text x="150" y="185" fill="#dc2626" font-family="Poppins" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="0.5">SAKTIVARDDHAK</text>
-                            <text x="150" y="202" fill="#1e293b" font-family="Poppins" font-size="10" font-weight="bold" text-anchor="middle">(MEN-O-POWER CAPSULE)</text>
-                            <text x="150" y="217" fill="#475569" font-family="Poppins" font-size="8" text-anchor="middle">Immunity Booster & Antioxidant</text>
-                            
-                            <!-- Purple Muscle Graphics Section -->
-                            <rect x="55" y="230" width="190" height="120" fill="#5e2d79"/>
-                            <path d="M130 250 C120 250 110 260 110 275 C110 295 130 310 150 325 C170 310 190 295 190 275 C190 260 180 250 170 250 C160 250 152 258 150 262 C148 258 140 250 130 250 Z" fill="#ffffff" opacity="0.2"/>
-                            <circle cx="150" cy="280" r="25" fill="#d4af37" opacity="0.3"/>
-                            <path d="M140 280 L148 288 L162 272" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-                            <text x="150" y="320" fill="#ffffff" font-family="Poppins" font-size="11" font-weight="bold" text-anchor="middle">POWER & STAMINA</text>
-                        </svg>
-                    </div>
+                    <img src="./SAKTIVARDDHAK CAPSULE (1).png" alt="Saktivarddhak Capsule Bottle" class="hero-product-img">
 
                     <div class="hero-price-tag">
                         <div class="price-item mrp">
@@ -994,13 +940,7 @@
                 </div>
 
                 <div class="product-mini-detail">
-                    <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="100" y="20" width="100" height="40" rx="8" fill="#f8fafc"/>
-                        <rect x="50" y="85" width="200" height="300" rx="30" fill="#ffffff"/>
-                        <rect x="55" y="110" width="190" height="45" fill="#1b4332"/>
-                        <text x="150" y="138" fill="#ffffff" font-size="12" text-anchor="middle" font-weight="bold">SIDDHARTH</text>
-                        <rect x="55" y="230" width="190" height="120" fill="#5e2d79"/>
-                    </svg>
+                    <img src="./SAKTIVARDDHAK CAPSULE (1).png" alt="Saktivarddhak Bottle">
                     <div class="mini-info">
                         <h4>Saktivarddhak Capsule</h4>
                         <p>1 Month Pack (60 Capsules)</p>
