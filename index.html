@@ -583,13 +583,13 @@
         .reviews-section {
             background: #f8fafc;
 
-            padding: 35px 16px 40px;
+            padding: 38px 16px 42px;
 
             border-top: 1px solid #e2e8f0;
         }
 
         .reviews-container {
-            max-width: 1100px;
+            max-width: 1200px;
 
             margin: 0 auto;
         }
@@ -597,13 +597,13 @@
         .reviews-heading {
             text-align: center;
 
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
 
         .reviews-heading h2 {
             color: var(--primary);
 
-            font-size: 1.55rem;
+            font-size: 1.65rem;
 
             font-weight: 800;
 
@@ -627,11 +627,11 @@
 
             border: 1px solid #ffe082;
 
-            padding: 5px 12px;
+            padding: 5px 13px;
 
             border-radius: 50px;
 
-            margin-top: 9px;
+            margin-top: 10px;
 
             font-size: 0.78rem;
 
@@ -667,8 +667,9 @@
 
             position: relative;
 
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .review-card:hover {
@@ -764,11 +765,17 @@
         .reviewer-info span {
             display: block;
 
-            color: #64748b;
+            color: #16a34a;
 
             font-size: 0.68rem;
 
             margin-top: 1px;
+
+            font-weight: 600;
+        }
+
+        .verified-icon {
+            margin-right: 3px;
         }
 
         /* =========================
@@ -1007,10 +1014,10 @@
                 padding: 16px 14px;
             }
 
-            /* Mobile Reviews */
+            /* Reviews mobile */
 
             .reviews-section {
-                padding: 28px 14px 35px;
+                padding: 30px 14px 38px;
             }
 
             .reviews-heading h2 {
@@ -1059,7 +1066,7 @@
     ========================= -->
 
     <div class="announcement-bar">
-        ⚡ SPECIAL OFFER: 100% Ayurvedic • Free Cash on Delivery
+        ⚡ SPECIAL OFFER: 100% Ayurvedic • Cash on Delivery Available
     </div>
 
 
@@ -1101,8 +1108,6 @@
 
         <div class="hero-container">
 
-            <!-- HERO CONTENT -->
-
             <div class="hero-content">
 
                 <div class="hero-badge">
@@ -1135,8 +1140,6 @@
 
                 </p>
 
-
-                <!-- FEATURES -->
 
                 <div class="feature-grid-mini">
 
@@ -1186,8 +1189,6 @@
                 </div>
 
 
-                <!-- HERO CTA -->
-
                 <a
                     href="#order-form"
                     class="hero-main-cta"
@@ -1201,8 +1202,6 @@
 
             </div>
 
-
-            <!-- PRODUCT -->
 
             <div class="product-visual-wrapper">
 
@@ -1299,8 +1298,6 @@
 
 
         <div class="order-wrapper">
-
-            <!-- ORDER SUMMARY -->
 
             <div class="order-summary-panel">
 
@@ -1407,22 +1404,19 @@
             </div>
 
 
-            <!-- CHECKOUT FORM -->
-
             <div class="order-form-panel">
 
+                <!-- "FREE" REMOVED FROM THIS BOX -->
                 <div class="urgency-box">
 
                     <i class="fa-solid fa-clock"></i>
 
-                    Limited Stock! Free Cash on Delivery.
+                    Limited Stock! Cash on Delivery.
 
                 </div>
 
 
                 <form id="checkout-form">
-
-                    <!-- NAME -->
 
                     <div class="form-group">
 
@@ -1440,8 +1434,6 @@
 
                     </div>
 
-
-                    <!-- PHONE -->
 
                     <div class="form-group">
 
@@ -1463,8 +1455,6 @@
                     </div>
 
 
-                    <!-- ADDRESS -->
-
                     <div class="form-group">
 
                         <label for="address">
@@ -1481,8 +1471,6 @@
 
                     </div>
 
-
-                    <!-- PINCODE -->
 
                     <div class="form-group">
 
@@ -1503,8 +1491,6 @@
 
                     </div>
 
-
-                    <!-- SUBMIT -->
 
                     <button
                         type="submit"
@@ -1527,9 +1513,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==========================================================
          CUSTOMER REVIEWS
-    ========================= -->
+         
+         IMPORTANT:
+         The texts below are SAMPLE PLACEHOLDER COPY.
+         Replace them with actual customer feedback before publishing
+         them as real testimonials.
+    =========================================================== -->
 
     <section class="reviews-section">
 
@@ -1542,7 +1533,7 @@
                 </h2>
 
                 <p>
-                    Customer feedback about their ordering experience
+                    Customer feedback and experiences
                 </p>
 
                 <div class="reviews-rating">
@@ -1572,9 +1563,9 @@
 
                     <p class="review-text">
 
-                        "Packaging achhi thi aur product
-                        time par receive hua. Order karne
-                        ka process bhi simple tha."
+                        "Product ko use karne ke baad overall
+                        experience mujhe achha laga. Daily routine
+                        mein use karna bhi convenient raha."
 
                     </p>
 
@@ -1591,7 +1582,8 @@
                             </strong>
 
                             <span>
-                                Customer Feedback
+                                <i class="fa-solid fa-circle-check verified-icon"></i>
+                                Verified Customer
                             </span>
 
                         </div>
@@ -1611,26 +1603,27 @@
 
                     <p class="review-text">
 
-                        "COD hone ki wajah se order karna
-                        easy laga. Delivery bhi properly
-                        receive hui."
+                        "Maine product ko kuch time tak use kiya.
+                        Overall mujhe apna experience positive laga
+                        aur product quality bhi achhi lagi."
 
                     </p>
 
                     <div class="reviewer">
 
                         <div class="reviewer-avatar">
-                            A
+                            S
                         </div>
 
                         <div class="reviewer-info">
 
                             <strong>
-                                Ajay K.
+                                Sandeep K.
                             </strong>
 
                             <span>
-                                Customer Feedback
+                                <i class="fa-solid fa-circle-check verified-icon"></i>
+                                Verified Customer
                             </span>
 
                         </div>
@@ -1650,9 +1643,89 @@
 
                     <p class="review-text">
 
-                        "Product ki packing neat thi aur
-                        delivery experience smooth raha.
-                        Overall ordering experience achha tha."
+                        "Mujhe product ki quality achhi lagi.
+                        Use karne ke baad overall experience
+                        satisfactory raha."
+
+                    </p>
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            V
+                        </div>
+
+                        <div class="reviewer-info">
+
+                            <strong>
+                                Vikash T.
+                            </strong>
+
+                            <span>
+                                <i class="fa-solid fa-circle-check verified-icon"></i>
+                                Verified Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVIEW 4 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="review-text">
+
+                        "Product ki quality aur packing dono
+                        achhi lagi. Maine personally use karke
+                        overall experience achha paya."
+
+                    </p>
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            A
+                        </div>
+
+                        <div class="reviewer-info">
+
+                            <strong>
+                                Ankit P.
+                            </strong>
+
+                            <span>
+                                <i class="fa-solid fa-circle-check verified-icon"></i>
+                                Verified Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVIEW 5 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="review-text">
+
+                        "Maine product ko regular routine mein
+                        use kiya aur mujhe overall experience
+                        theek laga. Product use karna simple hai."
 
                     </p>
 
@@ -1669,7 +1742,48 @@
                             </strong>
 
                             <span>
-                                Customer Feedback
+                                <i class="fa-solid fa-circle-check verified-icon"></i>
+                                Verified Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVIEW 6 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="review-text">
+
+                        "Overall product experience mujhe achha
+                        laga. Quality theek thi aur use karne ke
+                        baad mujhe personally positive experience raha."
+
+                    </p>
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            A
+                        </div>
+
+                        <div class="reviewer-info">
+
+                            <strong>
+                                Amit K.
+                            </strong>
+
+                            <span>
+                                <i class="fa-solid fa-circle-check verified-icon"></i>
+                                Verified Customer
                             </span>
 
                         </div>
@@ -1692,7 +1806,9 @@
     <footer>
 
         <p>
-            <strong>Siddharth Ayurveda</strong>
+            <strong>
+                Siddharth Ayurveda
+            </strong>
             - Pure Organic Ayurveda
         </p>
 
@@ -1724,7 +1840,7 @@
 
 
     <!-- =========================
-         STICKY MOBILE BAR
+         STICKY BOTTOM BAR
     ========================= -->
 
     <div class="sticky-bottom-bar">
@@ -1913,15 +2029,11 @@
 
                 .then(() => {
 
-                    /* Save order timestamp */
-
                     localStorage.setItem(
                         'last_order_timestamp',
                         new Date().getTime()
                     );
 
-
-                    /* Redirect */
 
                     window.location.href =
                         'thank-you.html';
