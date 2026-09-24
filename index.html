@@ -9,10 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- =========================
-         META PIXEL CODE
-         Base Pixel + PageView ONLY
-         ========================= -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -447,56 +444,52 @@
             font-weight: 600;
         }
 
-        /* =========================
-           CUSTOMER REVIEWS SECTION
-           ========================= */
-
+        /* Reviews Section */
         .reviews-section {
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
-            padding: 42px 16px 48px;
+            background: #f8faf9;
+            padding: 10px 16px 40px;
         }
 
         .reviews-container {
-            max-width: 1180px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .reviews-header {
             text-align: center;
-            margin-bottom: 26px;
+            margin-bottom: 22px;
         }
 
         .reviews-header h2 {
             color: var(--primary);
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .reviews-header p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .review-rating-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-top: 12px;
-            padding: 7px 15px;
-            background: #fffdf2;
-            border: 1px solid #f6d365;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 7px 13px;
             border-radius: 50px;
-            color: #9a6700;
-            font-size: 0.8rem;
-            font-weight: 700;
+            margin-top: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
         }
 
-        .review-rating-badge .stars {
-            color: #f5a900;
-            letter-spacing: 1px;
+        .stars,
+        .review-stars {
+            color: #f59e0b;
+            letter-spacing: 2px;
         }
 
         .reviews-grid {
@@ -508,57 +501,36 @@
         .review-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(15, 23, 42, 0.06);
-            position: relative;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .review-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
-        }
-
-        .review-card::after {
-            content: "“";
-            position: absolute;
-            top: 5px;
-            right: 15px;
-            font-family: Georgia, serif;
-            font-size: 48px;
-            line-height: 1;
-            color: #eadcff;
+            border-radius: var(--radius-md);
+            padding: 18px;
+            box-shadow: var(--shadow-sm);
         }
 
         .review-stars {
-            color: #f5a900;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 10px;
-            letter-spacing: 1px;
         }
 
         .review-text {
             color: #475569;
-            font-size: 0.86rem;
-            line-height: 1.7;
-            margin-bottom: 17px;
-            padding-right: 8px;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
         }
 
         .review-user {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding-top: 13px;
-            border-top: 1px solid #edf2f7;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 12px;
         }
 
         .review-avatar {
             width: 38px;
             height: 38px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #4c1275, #7020a8);
+            background: linear-gradient(135deg, #2a0845, #52187a);
             color: #ffffff;
             display: flex;
             align-items: center;
@@ -568,15 +540,19 @@
             flex-shrink: 0;
         }
 
+        .review-user-info {
+            display: flex;
+            flex-direction: column;
+        }
+
         .review-user-info strong {
-            display: block;
-            color: #172033;
             font-size: 0.82rem;
+            color: var(--text-dark);
         }
 
         .review-user-info span {
-            color: #94a3b8;
             font-size: 0.68rem;
+            color: var(--text-muted);
         }
 
         /* Sticky Bottom Mobile Bar */
@@ -751,36 +727,12 @@
                 padding: 16px 14px;
             }
 
-            /* Reviews mobile */
-            .reviews-section {
-                padding: 34px 14px 40px;
-            }
-
-            .reviews-header h2 {
-                font-size: 1.45rem;
-            }
-
-            .reviews-header p {
-                font-size: 0.82rem;
-            }
-
             .reviews-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
             }
 
-            .review-card {
-                padding: 17px;
-            }
-
-            .review-text {
-                font-size: 0.82rem;
-            }
-        }
-
-        @media (min-width: 769px) and (max-width: 1000px) {
-            .reviews-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .reviews-section {
+                padding-top: 5px;
             }
         }
     </style>
@@ -831,30 +783,29 @@
                 </h1>
 
                 <p class="hero-subtitle">
-                    Saktivarddhak Capsule (Men-O-Power) is designed to support
-                    physical endurance, strength & vital energy.
+                    Saktivarddhak Capsule (Men-O-Power) is designed to boost physical endurance, strength & vital power.
                 </p>
 
                 <div class="feature-grid-mini">
 
                     <div class="feature-mini-item">
                         <i class="fa-solid fa-bolt"></i>
-                        <span>Supports Stamina</span>
+                        <span>Boosts Stamina</span>
                     </div>
 
                     <div class="feature-mini-item">
                         <i class="fa-solid fa-shield-halved"></i>
-                        <span>Herbal Formula</span>
+                        <span>Immunity Booster</span>
                     </div>
 
                     <div class="feature-mini-item">
                         <i class="fa-solid fa-battery-full"></i>
-                        <span>Helps Reduce Fatigue</span>
+                        <span>Reduces Fatigue</span>
                     </div>
 
                     <div class="feature-mini-item">
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>Ayurvedic Formula</span>
+                        <span>Zero Side Effects</span>
                     </div>
 
                 </div>
@@ -892,7 +843,7 @@
                             <strong>₹1,999</strong>
                         </div>
 
-                        <div class="price-item">
+                        <div class="price-item" style="color: #10b981;">
                             <span>Discount</span>
                             <strong style="color:#10b981;">
                                 SAVE ₹1,000
@@ -926,7 +877,6 @@
 
         <div class="order-wrapper">
 
-            <!-- Order Summary -->
             <div class="order-summary-panel">
 
                 <div class="summary-header">
@@ -965,41 +915,25 @@
                 <div class="price-breakdown">
 
                     <div class="row-item">
-                        <span>
-                            Original Price (MRP)
-                        </span>
-
-                        <span>
-                            <del>₹2,999</del>
-                        </span>
+                        <span>Original Price (MRP)</span>
+                        <span><del>₹2,999</del></span>
                     </div>
 
                     <div class="row-item">
-
-                        <span>
-                            Special Offer Discount
-                        </span>
-
+                        <span>Special Offer Discount</span>
                         <span style="color:#10b981;">
                             - ₹1,000
                         </span>
-
                     </div>
 
                     <div class="row-item">
-
-                        <span>
-                            Delivery Charges
-                        </span>
-
+                        <span>Delivery Charges</span>
                         <span style="color:#10b981; font-weight:700;">
-                            COD
+                            FREE (COD)
                         </span>
-
                     </div>
 
                     <div class="row-item total">
-
                         <span>
                             ⚡ ORDER NOW (CASH ON DELIVERY)
                         </span>
@@ -1007,14 +941,13 @@
                         <span>
                             ₹1,999
                         </span>
-
                     </div>
 
                 </div>
 
             </div>
 
-            <!-- Checkout Form -->
+            <!-- Fast Checkout Form Panel -->
             <div class="order-form-panel">
 
                 <div class="urgency-box">
@@ -1051,8 +984,6 @@
                             id="phone"
                             name="phone"
                             pattern="[0-9]{10}"
-                            maxlength="10"
-                            inputmode="numeric"
                             placeholder="10-digit mobile number"
                             required
                         >
@@ -1086,8 +1017,6 @@
                             id="pincode"
                             name="pincode"
                             pattern="[0-9]{6}"
-                            maxlength="6"
-                            inputmode="numeric"
                             placeholder="6-digit pincode"
                             required
                         >
@@ -1111,10 +1040,7 @@
 
     </section>
 
-    <!-- =========================
-         CUSTOMER REVIEWS
-         ========================= -->
-
+    <!-- Customer Reviews -->
     <section class="reviews-section">
 
         <div class="reviews-container">
@@ -1130,8 +1056,13 @@
                 </p>
 
                 <div class="review-rating-badge">
-                    <span class="stars">★★★★★</span>
+
+                    <span class="stars">
+                        ★★★★★
+                    </span>
+
                     Customer Feedback
+
                 </div>
 
             </div>
@@ -1406,51 +1337,24 @@
 
     </div>
 
-    <!-- =========================
-         GOOGLE SHEETS + FORM SCRIPT
-         ========================= -->
-
+    <!-- Form Script - Google Sheets Removed -->
     <script>
 
-        const SCRIPT_URL =
-            "https://script.google.com/macros/s/AKfycbx_upSMMYqOH0eELhr7Wsu3mm3fP_3VHrRCKqT3cN4cdRcxT0OmWLSc_AHfo2oSOmhz/exec";
-
-
-        document
-        .getElementById('checkout-form')
-        .addEventListener('submit', function(e) {
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
 
             e.preventDefault();
 
+            // 1. Check 24-hour cooldown using LocalStorage
+            const lastOrderTime = localStorage.getItem('last_order_timestamp');
+            const now = new Date().getTime();
+            const cooldownPeriod = 24 * 60 * 60 * 1000;
 
-            /* =========================
-               1. 24-HOUR COOLDOWN
-               ========================= */
+            if (lastOrderTime && (now - lastOrderTime < cooldownPeriod)) {
 
-            const lastOrderTime =
-                localStorage.getItem('last_order_timestamp');
-
-            const now =
-                new Date().getTime();
-
-            const cooldownPeriod =
-                24 * 60 * 60 * 1000;
-
-
-            if (
-                lastOrderTime &&
-                (now - lastOrderTime < cooldownPeriod)
-            ) {
-
-                const remainingHours =
-                    Math.ceil(
-                        (
-                            cooldownPeriod -
-                            (now - lastOrderTime)
-                        ) /
-                        (1000 * 60 * 60)
-                    );
-
+                const remainingHours = Math.ceil(
+                    (cooldownPeriod - (now - lastOrderTime)) /
+                    (1000 * 60 * 60)
+                );
 
                 alert(
                     "Aapne already pichle 24 ghanto ke andar order submit kar diya hai! Kripya lagbhag " +
@@ -1461,17 +1365,9 @@
                 return;
             }
 
-
-            /* =========================
-               2. ADDRESS VALIDATION
-               ========================= */
-
+            // 2. Validate address
             const addressInput =
-                document
-                .getElementById('address')
-                .value
-                .trim();
-
+                document.getElementById('address').value.trim();
 
             if (addressInput.length < 10) {
 
@@ -1482,10 +1378,8 @@
                 return;
             }
 
-
-            const repeatedPattern =
-                /(.)\1{4,}/;
-
+            // Check for repeated consecutive characters
+            const repeatedPattern = /(.)\1{4,}/;
 
             if (repeatedPattern.test(addressInput)) {
 
@@ -1496,100 +1390,27 @@
                 return;
             }
 
-
-            /* =========================
-               3. BUTTON LOADING STATE
-               ========================= */
-
+            // Button loading state
             const submitBtn =
                 document.getElementById('submit-btn');
 
-
             submitBtn.disabled = true;
-
 
             submitBtn.innerHTML =
                 '<i class="fa-solid fa-spinner fa-spin"></i> SUBMITTING...';
 
-
-            /* =========================
-               4. FORM DATA
-               ========================= */
-
-            const formData =
-                new URLSearchParams();
-
-
-            formData.append(
-                'fullname',
-                document.getElementById('fullname').value
+            // Save cooldown timestamp
+            localStorage.setItem(
+                'last_order_timestamp',
+                new Date().getTime()
             );
 
+            // Redirect to thank-you page
+            setTimeout(function() {
 
-            formData.append(
-                'phone',
-                document.getElementById('phone').value
-            );
+                window.location.href = 'thank-you.html';
 
-
-            formData.append(
-                'address',
-                addressInput
-            );
-
-
-            formData.append(
-                'pincode',
-                document.getElementById('pincode').value
-            );
-
-
-            /* =========================
-               5. GOOGLE SHEETS
-               ========================= */
-
-            fetch(
-                SCRIPT_URL,
-                {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: formData
-                }
-            )
-
-            .then(() => {
-
-                localStorage.setItem(
-                    'last_order_timestamp',
-                    new Date().getTime()
-                );
-
-
-                window.location.href =
-                    'thank-you.html';
-
-            })
-
-            .catch((error) => {
-
-                console.error(
-                    'Error:',
-                    error
-                );
-
-
-                alert(
-                    "Kuch technical dikkat aayi hai. Kripya dobara koshish karein."
-                );
-
-
-                submitBtn.disabled = false;
-
-
-                submitBtn.innerHTML =
-                    '<i class="fa-solid fa-paper-plane"></i> SUBMIT NOW';
-
-            });
+            }, 300);
 
         });
 
