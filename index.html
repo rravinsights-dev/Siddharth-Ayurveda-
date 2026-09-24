@@ -888,6 +888,7 @@ ORDER NOW - ₹1,999 ONLY
 
 </a>
 
+
 </div>
 
 
@@ -943,6 +944,7 @@ SAVE ₹1,000
 </div>
 
 </div>
+
 
 </div>
 
@@ -1498,7 +1500,6 @@ Order Now
 
 
 <!-- GOOGLE SHEETS FORM SUBMISSION -->
-
 <script>
 
 const SCRIPT_URL =
@@ -1506,204 +1507,217 @@ const SCRIPT_URL =
 
 
 document.getElementById('checkout-form').addEventListener(
-'submit',
-function(e){
+    'submit',
+    function(e) {
 
-e.preventDefault();
-
-
-/* ===============================
-   24 HOURS ORDER COOLDOWN
-================================ */
-
-const lastOrderTime =
-localStorage.getItem('last_order_timestamp');
-
-const now =
-new Date().getTime();
-
-const cooldownPeriod =
-24 * 60 * 60 * 1000;
+        e.preventDefault();
 
 
-if(
-lastOrderTime &&
-(now - lastOrderTime < cooldownPeriod)
-){
+        /* ===============================
+           24 HOURS ORDER COOLDOWN
+        ================================ */
 
-const remainingHours =
-Math.ceil(
-(
-cooldownPeriod -
-(now - lastOrderTime)
-) /
-(1000 * 60 * 60)
+        const lastOrderTime =
+            localStorage.getItem('last_order_timestamp');
+
+        const now =
+            new Date().getTime();
+
+        const cooldownPeriod =
+            24 * 60 * 60 * 1000;
+
+        if (
+            lastOrderTime &&
+            (now - lastOrderTime < cooldownPeriod)
+        ) {
+
+            const remainingHours =
+                Math.ceil(
+                    (
+                        cooldownPeriod -
+                        (now - lastOrderTime)
+                    ) /
+                    (1000 * 60 * 60)
+                );
+
+            alert(
+                "Aapne already pichle 24 ghanto ke andar order submit kar diya hai! Kripya lagbhag " +
+                remainingHours +
+                " ghante baad dobara koshish karein."
+            );
+
+            return;
+        }
+
+
+        /* ===============================
+           ADDRESS VALIDATION
+        ================================ */
+
+        const addressInput =
+            document.getElementById('address')
+            .value
+            .trim();
+
+        if (addressInput.length < 10) {
+
+            alert(
+                "Kripya apna poora aur sahi delivery address (House No., Area, Landmark ke sath) darj karein."
+            );
+
+            return;
+        }
+
+
+        const repeatedPattern =
+            /(.)\1{4,}/;
+
+        if (repeatedPattern.test(addressInput)) {
+
+            alert(
+                "Aapka address invalid lag raha hai. Kripya valid address dalein jisme meaningful words ho."
+            );
+
+            return;
+        }
+
+
+        /* ===============================
+           SUBMIT BUTTON
+        ================================ */
+
+        const submitBtn =
+            document.getElementById('submit-btn');
+
+        submitBtn.disabled = true;
+
+        submitBtn.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i> SUBMITTING...';
+
+
+        /* ===============================
+           HIDDEN IFRAME
+           NO FETCH / NO NO-CORS
+        ================================ */
+
+        let iframe =
+            document.getElementById('google-sheet-frame');
+
+        if (!iframe) {
+
+            iframe =
+                document.createElement('iframe');
+
+            iframe.id =
+                'google-sheet-frame';
+
+            iframe.name =
+                'google-sheet-frame';
+
+            iframe.style.display =
+                'none';
+
+            document.body.appendChild(iframe);
+        }
+
+
+        /* ===============================
+           NATIVE HTML POST FORM
+        ================================ */
+
+        const tempForm =
+            document.createElement('form');
+
+        tempForm.method =
+            'POST';
+
+        tempForm.action =
+            SCRIPT_URL;
+
+        tempForm.target =
+            'google-sheet-frame';
+
+        tempForm.style.display =
+            'none';
+
+
+        const fields = {
+
+            fullname:
+                document.getElementById('fullname')
+                .value
+                .trim(),
+
+            phone:
+                document.getElementById('phone')
+                .value
+                .trim(),
+
+            address:
+                document.getElementById('address')
+                .value
+                .trim(),
+
+            pincode:
+                document.getElementById('pincode')
+                .value
+                .trim()
+
+        };
+
+
+        Object.keys(fields).forEach(function(key) {
+
+            const input =
+                document.createElement('input');
+
+            input.type =
+                'hidden';
+
+            input.name =
+                key;
+
+            input.value =
+                fields[key];
+
+            tempForm.appendChild(input);
+
+        });
+
+
+        document.body.appendChild(tempForm);
+
+
+        /* ===============================
+           SEND TO GOOGLE APPS SCRIPT
+        ================================ */
+
+        tempForm.submit();
+
+
+        /* ===============================
+           SAVE COOLDOWN
+        ================================ */
+
+        localStorage.setItem(
+            'last_order_timestamp',
+            new Date().getTime()
+        );
+
+
+        /* ===============================
+           THANK YOU PAGE
+        ================================ */
+
+        setTimeout(function() {
+
+            window.location.href =
+                'thank-you.html';
+
+        }, 2000);
+
+    }
 );
-
-
-alert(
-"Aapne already pichle 24 ghanto ke andar order submit kar diya hai! Kripya lagbhag " +
-remainingHours +
-" ghante baad dobara koshish karein."
-);
-
-return;
-
-}
-
-
-/* ===============================
-   ADDRESS VALIDATION
-================================ */
-
-const addressInput =
-document.getElementById('address')
-.value
-.trim();
-
-
-if(addressInput.length < 10){
-
-alert(
-"Kripya apna poora aur sahi delivery address (House No., Area, Landmark ke sath) darj karein."
-);
-
-return;
-
-}
-
-
-const repeatedPattern =
-/(.)\1{4,}/;
-
-
-if(
-repeatedPattern.test(addressInput)
-){
-
-alert(
-"Aapka address invalid lag raha hai. Kripya valid address dalein jisme meaningful words ho."
-);
-
-return;
-
-}
-
-
-/* ===============================
-   SUBMIT BUTTON
-================================ */
-
-const submitBtn =
-document.getElementById('submit-btn');
-
-
-submitBtn.disabled = true;
-
-
-submitBtn.innerHTML =
-'<i class="fa-solid fa-spinner fa-spin"></i> SUBMITTING...';
-
-
-/* ===============================
-   PREPARE GOOGLE SHEET DATA
-================================ */
-
-const data =
-new URLSearchParams();
-
-
-data.append(
-'fullname',
-document.getElementById('fullname')
-.value
-.trim()
-);
-
-
-data.append(
-'phone',
-document.getElementById('phone')
-.value
-.trim()
-);
-
-
-data.append(
-'address',
-document.getElementById('address')
-.value
-.trim()
-);
-
-
-data.append(
-'pincode',
-document.getElementById('pincode')
-.value
-.trim()
-);
-
-
-/* ===============================
-   SEND DATA TO NEW GOOGLE SHEET
-================================ */
-
-fetch(
-SCRIPT_URL,
-{
-
-method:'POST',
-
-mode:'no-cors',
-
-headers:{
-'Content-Type':
-'application/x-www-form-urlencoded;charset=UTF-8'
-},
-
-body:data.toString()
-
-}
-)
-
-
-.then(function(){
-
-localStorage.setItem(
-'last_order_timestamp',
-new Date().getTime()
-);
-
-
-window.location.href =
-'thank-you.html';
-
-})
-
-
-.catch(function(error){
-
-console.error(
-'Google Sheets submission error:',
-error
-);
-
-
-submitBtn.disabled = false;
-
-
-submitBtn.innerHTML =
-'<i class="fa-solid fa-paper-plane"></i> SUBMIT NOW';
-
-
-alert(
-'Form submit nahi ho paya. Kripya dobara try karein.'
-);
-
-});
-
-});
 
 </script>
 
