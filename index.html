@@ -1,1420 +1,626 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddharth Ayurveda - Saktivarddhak Capsule</title>
-
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '1067476232743146');
-    fbq('track', 'PageView');
-    </script>
-
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1067476232743146&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
-
-    <style>
-        :root {
-            --primary: #2a0845;
-            --primary-light: #4a154b;
-            --accent-gold: #ffd700;
-            --accent-orange: #ff6b6b;
-            --bg-light: #f8faf9;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --white: #ffffff;
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.15);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.5;
-            padding-bottom: 80px;
-        }
-
-        /* Top Announcement Bar */
-        .announcement-bar {
-            background: #19032b;
-            color: var(--accent-gold);
-            text-align: center;
-            padding: 8px 12px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-
-        /* Header */
-        header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: relative;
-            z-index: 100;
-            padding: 12px 16px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .header-cta-btn {
-            background: linear-gradient(135deg, #ffd700, #e6c200);
-            color: #000000;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(180deg, #2a0845 0%, #3b115a 50%, #52187a 100%);
-            color: var(--white);
-            padding: 24px 16px 35px;
-            position: relative;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(255, 215, 0, 0.15);
-            border: 1px solid rgba(255, 215, 0, 0.4);
-            padding: 5px 14px;
-            border-radius: 50px;
-            font-size: 0.78rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .hero-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            line-height: 1.25;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        .hero-title span {
-            color: var(--accent-gold);
-        }
-
-        .hero-subtitle {
-            font-size: 0.95rem;
-            color: #e9d5ff;
-            margin-bottom: 20px;
-            opacity: 0.95;
-        }
-
-        .feature-grid-mini {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-
-        .feature-mini-item {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 10px;
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.82rem;
-            font-weight: 500;
-        }
-
-        .feature-mini-item i {
-            color: var(--accent-gold);
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .product-visual-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .product-card-preview {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: var(--radius-lg);
-            padding: 20px 16px;
-            width: 100%;
-            max-width: 380px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-        }
-
-        .badge-100-ayurvedic {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: linear-gradient(135deg, #10b981, #047857);
-            color: white;
-            padding: 5px 14px;
-            border-radius: 50px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            text-transform: uppercase;
-        }
-
-        .hero-product-img {
-            max-width: 210px;
-            width: 100%;
-            height: auto;
-            margin: 10px auto 10px;
-            filter: drop-shadow(0 12px 20px rgba(0,0,0,0.4));
-        }
-
-        .hero-price-tag {
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: var(--radius-md);
-            padding: 12px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border: 1px dashed rgba(255, 215, 0, 0.4);
-        }
-
-        .price-item span {
-            display: block;
-            font-size: 0.7rem;
-            color: #d8b4fe;
-            text-transform: uppercase;
-        }
-
-        .price-item strong {
-            font-size: 1.35rem;
-            color: var(--accent-gold);
-        }
-
-        .price-item.mrp strong {
-            font-size: 1rem;
-            color: #a78bfa;
-            text-decoration: line-through;
-        }
-
-        .hero-main-cta {
-            width: 100%;
-            background: linear-gradient(135deg, #ff6b6b, #ee5253);
-            color: #fff;
-            text-align: center;
-            padding: 14px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
-            margin-top: 15px;
-        }
-
-        /* Order Form Section */
-        .order-section {
-            padding: 30px 16px 40px;
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 18px;
-        }
-
-        .section-header h2 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 4px;
-        }
-
-        .order-wrapper {
-            background: var(--white);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            border: 1px solid #e2e8f0;
-        }
-
-        .order-summary-panel {
-            background: linear-gradient(180deg, #2a0845 0%, #19032b 100%);
-            color: var(--white);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .summary-header h3 {
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-        }
-
-        .product-mini-detail {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 14px 0;
-            background: rgba(255,255,255,0.08);
-            padding: 10px 12px;
-            border-radius: var(--radius-sm);
-        }
-
-        .product-mini-detail img {
-            width: 45px;
-            height: auto;
-        }
-
-        .mini-info h4 {
-            font-size: 0.9rem;
-            line-height: 1.2;
-        }
-
-        .mini-info p {
-            font-size: 0.75rem;
-            color: #d8b4fe;
-        }
-
-        .price-breakdown {
-            margin-top: 10px;
-            border-top: 1px solid rgba(255,255,255,0.12);
-            padding-top: 10px;
-        }
-
-        .row-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 6px;
-            font-size: 0.82rem;
-        }
-
-        .row-item.total {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            border-top: 1px dashed rgba(255,255,255,0.2);
-            padding-top: 8px;
-            margin-top: 8px;
-        }
-
-        .order-form-panel {
-            padding: 20px 18px;
-        }
-
-        .form-group {
-            margin-bottom: 12px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 4px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1.5px solid #cbd5e1;
-            border-radius: var(--radius-sm);
-            font-size: 0.88rem;
-            outline: none;
-            background: #f8fafc;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary);
-            background: #ffffff;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #ff6b6b, #ee5253);
-            color: var(--white);
-            border: none;
-            padding: 14px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 6px 18px rgba(255, 107, 107, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .urgency-box {
-            background: #fff8e1;
-            border: 1px solid #ffe082;
-            padding: 6px 10px;
-            border-radius: var(--radius-sm);
-            margin-bottom: 12px;
-            text-align: center;
-            font-size: 0.78rem;
-            color: #856404;
-            font-weight: 600;
-        }
-
-        /* Reviews Section */
-        .reviews-section {
-            background: #f8faf9;
-            padding: 10px 16px 40px;
-        }
-
-        .reviews-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 22px;
-        }
-
-        .reviews-header h2 {
-            color: var(--primary);
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .reviews-header p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        .review-rating-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 7px 13px;
-            border-radius: 50px;
-            margin-top: 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .stars,
-        .review-stars {
-            color: #f59e0b;
-            letter-spacing: 2px;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .review-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: var(--radius-md);
-            padding: 18px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .review-stars {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        .review-text {
-            color: #475569;
-            font-size: 0.82rem;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        .review-user {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 12px;
-        }
-
-        .review-avatar {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2a0845, #52187a);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-
-        .review-user-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .review-user-info strong {
-            font-size: 0.82rem;
-            color: var(--text-dark);
-        }
-
-        .review-user-info span {
-            font-size: 0.68rem;
-            color: var(--text-muted);
-        }
-
-        /* Sticky Bottom Mobile Bar */
-        .sticky-bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #ffffff;
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.12);
-            padding: 10px 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 99;
-            border-top: 2px solid var(--accent-gold);
-        }
-
-        .sticky-price-info {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .sticky-price {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .sticky-mrp {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
-        }
-
-        .sticky-btn {
-            background: linear-gradient(135deg, #10b981, #047857);
-            color: var(--white);
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.88rem;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        footer {
-            background: #19032b;
-            color: #94a3b8;
-            padding: 25px 16px 85px;
-            text-align: center;
-            font-size: 0.82rem;
-            line-height: 1.6;
-        }
-
-        footer a {
-            color: #ffd700;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-
-            .logo-img {
-                height: 52px;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 18px;
-                text-align: center;
-            }
-
-            .hero-title {
-                font-size: 1.65rem;
-            }
-
-            .hero-subtitle {
-                font-size: 0.88rem;
-                margin-bottom: 15px;
-            }
-
-            .hero-content {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .hero-badge {
-                align-self: center;
-            }
-
-            .product-visual-wrapper {
-                order: 2;
-                margin-bottom: 15px;
-            }
-
-            .feature-grid-mini {
-                order: 3;
-            }
-
-            .hero-main-cta {
-                order: 4;
-            }
-
-            .order-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .order-summary-panel {
-                padding: 12px 14px;
-                background: linear-gradient(135deg, #2a0845, #19032b);
-            }
-
-            .summary-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .summary-header h3 {
-                font-size: 1rem;
-            }
-
-            .summary-header p {
-                display: none;
-            }
-
-            .product-mini-detail {
-                margin: 8px 0;
-                padding: 8px 10px;
-            }
-
-            .product-mini-detail img {
-                width: 36px;
-            }
-
-            .mini-info h4 {
-                font-size: 0.82rem;
-            }
-
-            .mini-info p {
-                font-size: 0.7rem;
-            }
-
-            .price-breakdown {
-                margin-top: 6px;
-                padding-top: 6px;
-            }
-
-            .row-item {
-                display: none;
-            }
-
-            .row-item.total {
-                display: flex;
-                font-size: 0.95rem;
-                margin-top: 0;
-                padding-top: 0;
-                border-top: none;
-            }
-
-            .order-form-panel {
-                padding: 16px 14px;
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .reviews-section {
-                padding-top: 5px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        ⚡ SPECIAL OFFER: 100% Ayurvedic • Cash on Delivery Available
-    </div>
-
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-
-            <a href="#" class="brand-logo">
-                <img
-                    src="./ChatGPT Image Sep 22, 2026, 02_56_48 PM.png"
-                    alt="Siddharth Ayurveda Logo"
-                    class="logo-img"
-                >
-            </a>
-
-            <a href="#order-form" class="header-cta-btn">
-                Buy @ ₹1,999
-            </a>
-
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-
-        <div class="hero-container">
-
-            <div class="hero-content">
-
-                <div class="hero-badge">
-                    <i class="fa-solid fa-leaf"></i>
-                    100% Herbal & Safe Formula
-                </div>
-
-                <h1 class="hero-title">
-                    Restore Ultimate
-                    <span>Energy & Stamina</span>
-                    Naturally
-                </h1>
-
-                <p class="hero-subtitle">
-                    Saktivarddhak Capsule (Men-O-Power) is designed to boost physical endurance, strength & vital power.
-                </p>
-
-                <div class="feature-grid-mini">
-
-                    <div class="feature-mini-item">
-                        <i class="fa-solid fa-bolt"></i>
-                        <span>Boosts Stamina</span>
-                    </div>
-
-                    <div class="feature-mini-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Immunity Booster</span>
-                    </div>
-
-                    <div class="feature-mini-item">
-                        <i class="fa-solid fa-battery-full"></i>
-                        <span>Reduces Fatigue</span>
-                    </div>
-
-                    <div class="feature-mini-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Zero Side Effects</span>
-                    </div>
-
-                </div>
-
-                <a href="#order-form" class="hero-main-cta">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    ORDER NOW - ₹1,999 ONLY
-                </a>
-
-            </div>
-
-            <div class="product-visual-wrapper">
-
-                <div class="product-card-preview">
-
-                    <div class="badge-100-ayurvedic">
-                        100% Ayurvedic
-                    </div>
-
-                    <img
-                        src="./ChatGPT Image Sep 22, 2026, 02_54_47 PM.png"
-                        alt="Saktivarddhak Capsule Bottle"
-                        class="hero-product-img"
-                    >
-
-                    <div class="hero-price-tag">
-
-                        <div class="price-item mrp">
-                            <span>MRP</span>
-                            <strong>₹2,999</strong>
-                        </div>
-
-                        <div class="price-item">
-                            <span>Offer Price</span>
-                            <strong>₹1,999</strong>
-                        </div>
-
-                        <div class="price-item" style="color: #10b981;">
-                            <span>Discount</span>
-                            <strong style="color:#10b981;">
-                                SAVE ₹1,000
-                            </strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Order Form Section -->
-    <section class="order-section" id="order-form">
-
-        <div class="section-header">
-
-            <h2>
-                Place Your Order Now
-            </h2>
-
-            <p>
-                Fill form below for Cash on Delivery (COD) Order
-            </p>
-
-        </div>
-
-        <div class="order-wrapper">
-
-            <div class="order-summary-panel">
-
-                <div class="summary-header">
-
-                    <h3>
-                        Order Summary
-                    </h3>
-
-                    <p style="color:#d8b4fe; font-size:0.8rem;">
-                        Siddharth Ayurveda Official
-                    </p>
-
-                </div>
-
-                <div class="product-mini-detail">
-
-                    <img
-                        src="./ChatGPT Image Sep 22, 2026, 02_54_47 PM.png"
-                        alt="Saktivarddhak Bottle"
-                    >
-
-                    <div class="mini-info">
-
-                        <h4>
-                            Saktivarddhak Capsule
-                        </h4>
-
-                        <p>
-                            1 Month Pack (60 Capsules) • ★ 4.9/5
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="price-breakdown">
-
-                    <div class="row-item">
-                        <span>Original Price (MRP)</span>
-                        <span><del>₹2,999</del></span>
-                    </div>
-
-                    <div class="row-item">
-                        <span>Special Offer Discount</span>
-                        <span style="color:#10b981;">
-                            - ₹1,000
-                        </span>
-                    </div>
-
-                    <div class="row-item">
-                        <span>Delivery Charges</span>
-                        <span style="color:#10b981; font-weight:700;">
-                            FREE (COD)
-                        </span>
-                    </div>
-
-                    <div class="row-item total">
-                        <span>
-                            ⚡ ORDER NOW (CASH ON DELIVERY)
-                        </span>
-
-                        <span>
-                            ₹1,999
-                        </span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Fast Checkout Form Panel -->
-            <div class="order-form-panel">
-
-                <div class="urgency-box">
-                    <i class="fa-solid fa-clock"></i>
-                    Limited Stock! Cash on Delivery Available.
-                </div>
-
-                <form id="checkout-form">
-
-                    <div class="form-group">
-
-                        <label for="fullname">
-                            Full Name (पूरा नाम)
-                        </label>
-
-                        <input
-                            type="text"
-                            id="fullname"
-                            name="fullname"
-                            placeholder="Enter your full name"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="phone">
-                            Mobile Number (मोबाइल नंबर)
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            pattern="[0-9]{10}"
-                            placeholder="10-digit mobile number"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="address">
-                            Full Delivery Address (पूरा पता)
-                        </label>
-
-                        <textarea
-                            id="address"
-                            name="address"
-                            rows="2"
-                            placeholder="House No., Area, Landmark"
-                            required
-                        ></textarea>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="pincode">
-                            Pincode (पिनकोड)
-                        </label>
-
-                        <input
-                            type="text"
-                            id="pincode"
-                            name="pincode"
-                            pattern="[0-9]{6}"
-                            placeholder="6-digit pincode"
-                            required
-                        >
-
-                    </div>
-
-                    <button
-                        type="submit"
-                        id="submit-btn"
-                        class="submit-btn"
-                    >
-                        <i class="fa-solid fa-paper-plane"></i>
-                        SUBMIT NOW
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Customer Reviews -->
-    <section class="reviews-section">
-
-        <div class="reviews-container">
-
-            <div class="reviews-header">
-
-                <h2>
-                    What Our Customers Say
-                </h2>
-
-                <p>
-                    Customer feedback about their product experience
-                </p>
-
-                <div class="review-rating-badge">
-
-                    <span class="stars">
-                        ★★★★★
-                    </span>
-
-                    Customer Feedback
-
-                </div>
-
-            </div>
-
-            <div class="reviews-grid">
-
-                <!-- Review 1 -->
-                <div class="review-card">
-
-                    <div class="review-stars">
-                        ★★★★★
-                    </div>
-
-                    <p class="review-text">
-                        "Product use karne ke baad mujhe apni daily energy
-                        aur stamina mein improvement feel hua. Overall
-                        experience achha raha."
-                    </p>
-
-                    <div class="review-user">
-
-                        <div class="review-avatar">
-                            R
-                        </div>
-
-                        <div class="review-user-info">
-
-                            <strong>
-                                Rahul S.
-                            </strong>
-
-                            <span>
-                                Customer Feedback
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-card">
-
-                    <div class="review-stars">
-                        ★★★★★
-                    </div>
-
-                    <p class="review-text">
-                        "Maine regular use kiya aur kuch time baad energy
-                        level pehle se better laga. Ordering process bhi
-                        simple tha."
-                    </p>
-
-                    <div class="review-user">
-
-                        <div class="review-avatar">
-                            A
-                        </div>
-
-                        <div class="review-user-info">
-
-                            <strong>
-                                Ajay K.
-                            </strong>
-
-                            <span>
-                                Customer Feedback
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-card">
-
-                    <div class="review-stars">
-                        ★★★★★
-                    </div>
-
-                    <p class="review-text">
-                        "Packaging neat thi aur product properly packed
-                        tha. Product ka overall experience mujhe achha laga."
-                    </p>
-
-                    <div class="review-user">
-
-                        <div class="review-avatar">
-                            M
-                        </div>
-
-                        <div class="review-user-info">
-
-                            <strong>
-                                Manish R.
-                            </strong>
-
-                            <span>
-                                Customer Feedback
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Review 4 -->
-                <div class="review-card">
-
-                    <div class="review-stars">
-                        ★★★★★
-                    </div>
-
-                    <p class="review-text">
-                        "Mujhe sabse achhi baat ye lagi ki product lena
-                        convenient tha. Regular routine ke saath use karna
-                        easy raha."
-                    </p>
-
-                    <div class="review-user">
-
-                        <div class="review-avatar">
-                            V
-                        </div>
-
-                        <div class="review-user-info">
-
-                            <strong>
-                                Vikash P.
-                            </strong>
-
-                            <span>
-                                Customer Feedback
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Review 5 -->
-                <div class="review-card">
-
-                    <div class="review-stars">
-                        ★★★★★
-                    </div>
-
-                    <p class="review-text">
-                        "Product ka experience overall satisfactory raha.
-                        Packaging achhi thi aur mujhe use karne mein koi
-                        problem nahi hui."
-                    </p>
-
-                    <div class="review-user">
-
-                        <div class="review-avatar">
-                            S
-                        </div>
-
-                        <div class="review-user-info">
-
-                            <strong>
-                                Sandeep M.
-                            </strong>
-
-                            <span>
-                                Customer Feedback
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Review 6 -->
-                <div class="review-card">
-
-                    <div class="review-stars">
-                        ★★★★★
-                    </div>
-
-                    <p class="review-text">
-                        "Maine product ko apni daily routine mein include
-                        kiya. Overall ordering aur product experience
-                        convenient laga."
-                    </p>
-
-                    <div class="review-user">
-
-                        <div class="review-avatar">
-                            N
-                        </div>
-
-                        <div class="review-user-info">
-
-                            <strong>
-                                Nitin G.
-                            </strong>
-
-                            <span>
-                                Customer Feedback
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            <strong>Siddharth Ayurveda</strong>
-            - Pure Organic Ayurveda
-        </p>
-
-        <p>
-            &copy; 2026 Siddharth Ayurveda. All Rights Reserved.
-        </p>
-
-        <p style="margin-top: 6px; font-size: 0.78rem;">
-
-            Ads and Landing page by
-
-            <a
-                href="https://www.instagram.com/_theadsguru.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                TheAdsGuru Advertising and Marketing Agency
-            </a>
-
-        </p>
-
-    </footer>
-
-    <!-- Sticky Bottom Mobile Bar -->
-    <div class="sticky-bottom-bar">
-
-        <div class="sticky-price-info">
-
-            <span class="sticky-price">
-                ₹1,999
-            </span>
-
-            <span class="sticky-mrp">
-                ₹2,999
-            </span>
-
-        </div>
-
-        <a
-            href="#order-form"
-            class="sticky-btn"
-        >
-            <i class="fa-solid fa-bolt"></i>
-            Order Now
-        </a>
-
-    </div>
-
-    <!-- Form Script - Google Sheets Removed -->
-    <script>
-
-        document.getElementById('checkout-form').addEventListener('submit', function(e) {
-
-            e.preventDefault();
-
-            // 1. Check 24-hour cooldown using LocalStorage
-            const lastOrderTime = localStorage.getItem('last_order_timestamp');
-            const now = new Date().getTime();
-            const cooldownPeriod = 24 * 60 * 60 * 1000;
-
-            if (lastOrderTime && (now - lastOrderTime < cooldownPeriod)) {
-
-                const remainingHours = Math.ceil(
-                    (cooldownPeriod - (now - lastOrderTime)) /
-                    (1000 * 60 * 60)
-                );
-
-                alert(
-                    "Aapne already pichle 24 ghanto ke andar order submit kar diya hai! Kripya lagbhag " +
-                    remainingHours +
-                    " ghante baad dobara koshish karein."
-                );
-
-                return;
-            }
-
-            // 2. Validate address
-            const addressInput =
-                document.getElementById('address').value.trim();
-
-            if (addressInput.length < 10) {
-
-                alert(
-                    "Kripya apna poora aur sahi delivery address (House No., Area, Landmark ke sath) darj karein."
-                );
-
-                return;
-            }
-
-            // Check for repeated consecutive characters
-            const repeatedPattern = /(.)\1{4,}/;
-
-            if (repeatedPattern.test(addressInput)) {
-
-                alert(
-                    "Aapka address invalid lag raha hai. Kripya valid address dalein jisme meaningful words ho."
-                );
-
-                return;
-            }
-
-            // Button loading state
-            const submitBtn =
-                document.getElementById('submit-btn');
-
-            submitBtn.disabled = true;
-
-            submitBtn.innerHTML =
-                '<i class="fa-solid fa-spinner fa-spin"></i> SUBMITTING...';
-
-            // Save cooldown timestamp
-            localStorage.setItem(
-                'last_order_timestamp',
-                new Date().getTime()
-            );
-
-            // Redirect to thank-you page
-            setTimeout(function() {
-
-                window.location.href = 'thank-you.html';
-
-            }, 300);
-
-        });
-
-    </script>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Siddharth Ayurveda - Saktivarddhak Capsule</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1067476232743146');
+fbq('track', 'PageView');
+</script><noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1067476232743146&ev=PageView&noscript=1"/></noscript><style>
+:root{--primary:#2a0845;--primary-light:#4a154b;--accent-gold:#ffd700;--accent-orange:#ff6b6b;--bg-light:#f8faf9;--text-dark:#1e293b;--text-muted:#64748b;--white:#ffffff;--radius-sm:8px;--radius-md:14px;--radius-lg:20px;--shadow-sm:0 4px 6px -1px rgba(0,0,0,0.05);--shadow-md:0 10px 15px -3px rgba(0,0,0,0.1);--shadow-lg:0 20px 25px -5px rgba(0,0,0,0.15)}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth}
+body{background-color:var(--bg-light);color:var(--text-dark);line-height:1.5;padding-bottom:80px}
+.announcement-bar{background:#19032b;color:var(--accent-gold);text-align:center;padding:8px 12px;font-size:.82rem;font-weight:600;letter-spacing:.3px}
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:relative;z-index:100;padding:12px 16px;border-bottom:1px solid #e2e8f0}
+.header-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.brand-logo{display:flex;align-items:center;text-decoration:none}
+.logo-img{height:60px;width:auto;object-fit:contain}
+.header-cta-btn{background:linear-gradient(135deg,#ffd700,#e6c200);color:#000;padding:10px 20px;border-radius:50px;font-weight:700;text-decoration:none;font-size:.9rem;box-shadow:0 4px 12px rgba(255,215,0,.3);display:inline-flex;align-items:center;gap:6px}
+.hero-section{background:linear-gradient(180deg,#2a0845 0%,#3b115a 50%,#52187a 100%);color:var(--white);padding:24px 16px 35px;position:relative}
+.hero-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.4);padding:5px 14px;border-radius:50px;font-size:.78rem;color:var(--accent-gold);font-weight:600;margin-bottom:12px}
+.hero-title{font-size:2.2rem;font-weight:800;line-height:1.25;margin-bottom:12px;letter-spacing:-.5px}
+.hero-title span{color:var(--accent-gold)}
+.hero-subtitle{font-size:.95rem;color:#e9d5ff;margin-bottom:20px;opacity:.95}
+.feature-grid-mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.feature-mini-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:10px;border-radius:var(--radius-sm);display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:500}
+.feature-mini-item i{color:var(--accent-gold);font-size:1rem;flex-shrink:0}
+.product-visual-wrapper{display:flex;justify-content:center;align-items:center}
+.product-card-preview{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:20px 16px;width:100%;max-width:380px;text-align:center;position:relative;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.badge-100-ayurvedic{position:absolute;top:-12px;right:20px;background:linear-gradient(135deg,#10b981,#047857);color:#fff;padding:5px 14px;border-radius:50px;font-size:.72rem;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,.2);text-transform:uppercase}
+.hero-product-img{max-width:210px;width:100%;height:auto;margin:10px auto;filter:drop-shadow(0 12px 20px rgba(0,0,0,.4))}
+.hero-price-tag{background:rgba(0,0,0,.35);border-radius:var(--radius-md);padding:12px;display:flex;justify-content:space-around;align-items:center;border:1px dashed rgba(255,215,0,.4)}
+.price-item span{display:block;font-size:.7rem;color:#d8b4fe;text-transform:uppercase}
+.price-item strong{font-size:1.35rem;color:var(--accent-gold)}
+.price-item.mrp strong{font-size:1rem;color:#a78bfa;text-decoration:line-through}
+.hero-main-cta{width:100%;background:linear-gradient(135deg,#ff6b6b,#ee5253);color:#fff;text-align:center;padding:14px;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 20px rgba(255,107,107,.4);margin-top:15px}
+.order-section{padding:30px 16px 40px;max-width:850px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:18px}
+.section-header h2{font-size:1.5rem;color:var(--primary);font-weight:800;line-height:1.2}
+.section-header p{color:var(--text-muted);font-size:.85rem;margin-top:4px}
+.order-wrapper{background:var(--white);border-radius:var(--radius-md);box-shadow:var(--shadow-md);overflow:hidden;display:grid;grid-template-columns:1fr 1.2fr;border:1px solid #e2e8f0}
+.order-summary-panel{background:linear-gradient(180deg,#2a0845 0%,#19032b 100%);color:var(--white);padding:20px;display:flex;flex-direction:column;justify-content:center}
+.summary-header h3{font-size:1.2rem;color:var(--accent-gold)}
+.product-mini-detail{display:flex;align-items:center;gap:12px;margin:14px 0;background:rgba(255,255,255,.08);padding:10px 12px;border-radius:var(--radius-sm)}
+.product-mini-detail img{width:45px;height:auto}
+.mini-info h4{font-size:.9rem;line-height:1.2}
+.mini-info p{font-size:.75rem;color:#d8b4fe}
+.price-breakdown{margin-top:10px;border-top:1px solid rgba(255,255,255,.12);padding-top:10px}
+.row-item{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.82rem}
+.row-item.total{font-size:1.05rem;font-weight:700;color:var(--accent-gold);border-top:1px dashed rgba(255,255,255,.2);padding-top:8px;margin-top:8px}
+.order-form-panel{padding:20px 18px}
+.form-group{margin-bottom:12px}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--text-dark);margin-bottom:4px}
+.form-group input,.form-group textarea{width:100%;padding:10px 12px;border:1.5px solid #cbd5e1;border-radius:var(--radius-sm);font-size:.88rem;outline:none;background:#f8fafc}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--primary);background:#fff}
+.submit-btn{width:100%;background:linear-gradient(135deg,#ff6b6b,#ee5253);color:var(--white);border:none;padding:14px;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(255,107,107,.4);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;text-transform:uppercase;letter-spacing:.5px}
+.urgency-box{background:#fff8e1;border:1px solid #ffe082;padding:6px 10px;border-radius:var(--radius-sm);margin-bottom:12px;text-align:center;font-size:.78rem;color:#856404;font-weight:600}
+.reviews-section{background:#f8fafc;border-top:1px solid #e2e8f0;padding:42px 16px 48px}
+.reviews-container{max-width:1180px;margin:0 auto}
+.reviews-header{text-align:center;margin-bottom:26px}
+.reviews-header h2{color:var(--primary);font-size:1.7rem;font-weight:800;line-height:1.2;margin-bottom:6px}
+.reviews-header p{color:var(--text-muted);font-size:.9rem}
+.review-rating-badge{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:7px 15px;background:#fffdf2;border:1px solid #f6d365;border-radius:50px;color:#9a6700;font-size:.8rem;font-weight:700}
+.review-rating-badge .stars{color:#f5a900;letter-spacing:1px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:20px;box-shadow:0 5px 15px rgba(15,23,42,.06);position:relative;transition:transform .2s ease,box-shadow .2s ease}
+.review-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,23,42,.09)}
+.review-card::after{content:"“";position:absolute;top:5px;right:15px;font-family:Georgia,serif;font-size:48px;line-height:1;color:#eadcff}
+.review-stars{color:#f5a900;font-size:.85rem;margin-bottom:10px;letter-spacing:1px}
+.review-text{color:#475569;font-size:.86rem;line-height:1.7;margin-bottom:17px;padding-right:8px}
+.review-user{display:flex;align-items:center;gap:10px;padding-top:13px;border-top:1px solid #edf2f7}
+.review-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#4c1275,#7020a8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.review-user-info strong{display:block;color:#172033;font-size:.82rem}
+.review-user-info span{color:#94a3b8;font-size:.68rem}
+.sticky-bottom-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -4px 15px rgba(0,0,0,.12);padding:10px 16px;display:flex;justify-content:space-between;align-items:center;z-index:99;border-top:2px solid var(--accent-gold)}
+.sticky-price-info{display:flex;align-items:center;gap:8px}
+.sticky-price{font-size:1.25rem;font-weight:800;color:var(--primary)}
+.sticky-mrp{font-size:.85rem;color:var(--text-muted);text-decoration:line-through}
+.sticky-btn{background:linear-gradient(135deg,#10b981,#047857);color:var(--white);padding:10px 22px;border-radius:50px;font-weight:700;text-decoration:none;font-size:.88rem;box-shadow:0 4px 12px rgba(16,185,129,.3);display:flex;align-items:center;gap:6px}
+footer{background:#19032b;color:#94a3b8;padding:25px 16px 85px;text-align:center;font-size:.82rem;line-height:1.6}
+footer a{color:#ffd700;text-decoration:underline;font-weight:600}
+footer a:hover{color:#fff}
+@media (max-width:768px){
+.logo-img{height:52px}
+.hero-container{grid-template-columns:1fr;gap:18px;text-align:center}
+.hero-title{font-size:1.65rem}
+.hero-subtitle{font-size:.88rem;margin-bottom:15px}
+.hero-content{display:flex;flex-direction:column}
+.hero-badge{align-self:center}
+.product-visual-wrapper{order:2;margin-bottom:15px}
+.feature-grid-mini{order:3}
+.hero-main-cta{order:4}
+.order-wrapper{grid-template-columns:1fr}
+.order-summary-panel{padding:12px 14px;background:linear-gradient(135deg,#2a0845,#19032b)}
+.summary-header{display:flex;justify-content:space-between;align-items:center}
+.summary-header h3{font-size:1rem}
+.summary-header p{display:none}
+.product-mini-detail{margin:8px 0;padding:8px 10px}
+.product-mini-detail img{width:36px}
+.mini-info h4{font-size:.82rem}
+.mini-info p{font-size:.7rem}
+.price-breakdown{margin-top:6px;padding-top:6px}
+.row-item{display:none}
+.row-item.total{display:flex;font-size:.95rem;margin-top:0;padding-top:0;border-top:none}
+.order-form-panel{padding:16px 14px}
+.reviews-section{padding:34px 14px 40px}
+.reviews-header h2{font-size:1.45rem}
+.reviews-header p{font-size:.82rem}
+.reviews-grid{grid-template-columns:1fr;gap:12px}
+.review-card{padding:17px}
+.review-text{font-size:.82rem}
+}
+@media (min-width:769px) and (max-width:1000px){
+.reviews-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style></head><body>
+
+<div class="announcement-bar">
+⚡ SPECIAL OFFER: 100% Ayurvedic • Cash on Delivery Available
+</div>
+
+<header>
+<div class="header-container">
+<a href="#" class="brand-logo">
+<img src="./ChatGPT Image Sep 22, 2026, 02_56_48 PM.png" alt="Siddharth Ayurveda Logo" class="logo-img">
+</a>
+<a href="#order-form" class="header-cta-btn">Buy @ ₹1,999</a>
+</div>
+</header>
+
+<section class="hero-section">
+<div class="hero-container">
+<div class="hero-content">
+
+<div class="hero-badge">
+<i class="fa-solid fa-leaf"></i>
+100% Herbal & Safe Formula
+</div>
+
+<h1 class="hero-title">
+Restore Ultimate
+<span>Energy & Stamina</span>
+Naturally
+</h1>
+
+<p class="hero-subtitle">
+Saktivarddhak Capsule (Men-O-Power) is designed to support
+physical endurance, strength & vital energy.
+</p>
+
+<div class="feature-grid-mini">
+<div class="feature-mini-item">
+<i class="fa-solid fa-bolt"></i>
+<span>Supports Stamina</span>
+</div>
+
+<div class="feature-mini-item">
+<i class="fa-solid fa-shield-halved"></i>
+<span>Herbal Formula</span>
+</div>
+
+<div class="feature-mini-item">
+<i class="fa-solid fa-battery-full"></i>
+<span>Helps Reduce Fatigue</span>
+</div>
+
+<div class="feature-mini-item">
+<i class="fa-solid fa-circle-check"></i>
+<span>Ayurvedic Formula</span>
+</div>
+</div>
+
+<a href="#order-form" class="hero-main-cta">
+<i class="fa-solid fa-cart-shopping"></i>
+ORDER NOW - ₹1,999 ONLY
+</a>
+
+</div>
+
+<div class="product-visual-wrapper">
+<div class="product-card-preview">
+
+<div class="badge-100-ayurvedic">
+100% Ayurvedic
+</div>
+
+<img src="./ChatGPT Image Sep 22, 2026, 02_54_47 PM.png"
+alt="Saktivarddhak Capsule Bottle"
+class="hero-product-img">
+
+<div class="hero-price-tag">
+
+<div class="price-item mrp">
+<span>MRP</span>
+<strong>₹2,999</strong>
+</div>
+
+<div class="price-item">
+<span>Offer Price</span>
+<strong>₹1,999</strong>
+</div>
+
+<div class="price-item">
+<span>Discount</span>
+<strong style="color:#10b981;">SAVE ₹1,000</strong>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="order-section" id="order-form">
+
+<div class="section-header">
+<h2>Place Your Order Now</h2>
+<p>Fill form below for Cash on Delivery (COD) Order</p>
+</div>
+
+<div class="order-wrapper">
+
+<div class="order-summary-panel">
+
+<div class="summary-header">
+<h3>Order Summary</h3>
+<p style="color:#d8b4fe;font-size:.8rem;">
+Siddharth Ayurveda Official
+</p>
+</div>
+
+<div class="product-mini-detail">
+
+<img src="./ChatGPT Image Sep 22, 2026, 02_54_47 PM.png"
+alt="Saktivarddhak Bottle">
+
+<div class="mini-info">
+<h4>Saktivarddhak Capsule</h4>
+<p>1 Month Pack (60 Capsules) • ★ 4.9/5</p>
+</div>
+
+</div>
+
+<div class="price-breakdown">
+
+<div class="row-item">
+<span>Original Price (MRP)</span>
+<span><del>₹2,999</del></span>
+</div>
+
+<div class="row-item">
+<span>Special Offer Discount</span>
+<span style="color:#10b981;">- ₹1,000</span>
+</div>
+
+<div class="row-item">
+<span>Delivery Charges</span>
+<span style="color:#10b981;font-weight:700;">COD</span>
+</div>
+
+<div class="row-item total">
+<span>⚡ ORDER NOW (CASH ON DELIVERY)</span>
+<span>₹1,999</span>
+</div>
+
+</div>
+</div>
+
+<div class="order-form-panel">
+
+<div class="urgency-box">
+<i class="fa-solid fa-clock"></i>
+Limited Stock! Cash on Delivery Available.
+</div>
+
+<form id="checkout-form">
+
+<div class="form-group">
+<label for="fullname">Full Name (पूरा नाम)</label>
+<input
+type="text"
+id="fullname"
+name="fullname"
+placeholder="Enter your full name"
+required>
+</div>
+
+<div class="form-group">
+<label for="phone">Mobile Number (मोबाइल नंबर)</label>
+<input
+type="tel"
+id="phone"
+name="phone"
+pattern="[0-9]{10}"
+maxlength="10"
+inputmode="numeric"
+placeholder="10-digit mobile number"
+required>
+</div>
+
+<div class="form-group">
+<label for="address">Full Delivery Address (पूरा पता)</label>
+<textarea
+id="address"
+name="address"
+rows="2"
+placeholder="House No., Area, Landmark"
+required></textarea>
+</div>
+
+<div class="form-group">
+<label for="pincode">Pincode (पिनकोड)</label>
+<input
+type="text"
+id="pincode"
+name="pincode"
+pattern="[0-9]{6}"
+maxlength="6"
+inputmode="numeric"
+placeholder="6-digit pincode"
+required>
+</div>
+
+<button
+type="submit"
+id="submit-btn"
+class="submit-btn">
+<i class="fa-solid fa-paper-plane"></i>
+SUBMIT NOW
+</button>
+
+</form>
+</div>
+</div>
+</section>
+
+<section class="reviews-section">
+
+<div class="reviews-container">
+
+<div class="reviews-header">
+<h2>What Our Customers Say</h2>
+
+<p>Customer feedback about their product experience</p>
+
+<div class="review-rating-badge">
+<span class="stars">★★★★★</span>
+Customer Feedback
+</div>
+</div>
+
+<div class="reviews-grid">
+
+<div class="review-card">
+
+<div class="review-stars">★★★★★</div>
+
+<p class="review-text">
+"Product use karne ke baad mujhe apni daily energy
+aur stamina mein improvement feel hua. Overall
+experience achha raha."
+</p>
+
+<div class="review-user">
+
+<div class="review-avatar">R</div>
+
+<div class="review-user-info">
+<strong>Rahul S.</strong>
+<span>Customer Feedback</span>
+</div>
+
+</div>
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">★★★★★</div>
+
+<p class="review-text">
+"Maine regular use kiya aur kuch time baad energy
+level pehle se better laga. Ordering process bhi
+simple tha."
+</p>
+
+<div class="review-user">
+
+<div class="review-avatar">A</div>
+
+<div class="review-user-info">
+<strong>Ajay K.</strong>
+<span>Customer Feedback</span>
+</div>
+
+</div>
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">★★★★★</div>
+
+<p class="review-text">
+"Packaging neat thi aur product properly packed
+tha. Product ka overall experience mujhe achha laga."
+</p>
+
+<div class="review-user">
+
+<div class="review-avatar">M</div>
+
+<div class="review-user-info">
+<strong>Manish R.</strong>
+<span>Customer Feedback</span>
+</div>
+
+</div>
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">★★★★★</div>
+
+<p class="review-text">
+"Mujhe sabse achhi baat ye lagi ki product lena
+convenient tha. Regular routine ke saath use karna
+easy raha."
+</p>
+
+<div class="review-user">
+
+<div class="review-avatar">V</div>
+
+<div class="review-user-info">
+<strong>Vikash P.</strong>
+<span>Customer Feedback</span>
+</div>
+
+</div>
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">★★★★★</div>
+
+<p class="review-text">
+"Product ka experience overall satisfactory raha.
+Packaging achhi thi aur mujhe use karne mein koi
+problem nahi hui."
+</p>
+
+<div class="review-user">
+
+<div class="review-avatar">S</div>
+
+<div class="review-user-info">
+<strong>Sandeep M.</strong>
+<span>Customer Feedback</span>
+</div>
+
+</div>
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">★★★★★</div>
+
+<p class="review-text">
+"Maine product ko apni daily routine mein include
+kiya. Overall ordering aur product experience
+convenient laga."
+</p>
+
+<div class="review-user">
+
+<div class="review-avatar">N</div>
+
+<div class="review-user-info">
+<strong>Nitin G.</strong>
+<span>Customer Feedback</span>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+
+<p>
+<strong>Siddharth Ayurveda</strong>
+- Pure Organic Ayurveda
+</p>
+
+<p>
+&copy; 2026 Siddharth Ayurveda. All Rights Reserved.
+</p>
+
+<p style="margin-top:6px;font-size:.78rem;">
+Ads and Landing page by
+<a
+href="https://www.instagram.com/_theadsguru.in/"
+target="_blank"
+rel="noopener noreferrer">
+TheAdsGuru Advertising and Marketing Agency
+</a>
+</p>
+
+</footer>
+
+<div class="sticky-bottom-bar">
+
+<div class="sticky-price-info">
+<span class="sticky-price">₹1,999</span>
+<span class="sticky-mrp">₹2,999</span>
+</div>
+
+<a href="#order-form" class="sticky-btn">
+<i class="fa-solid fa-bolt"></i>
+Order Now
+</a>
+
+</div>
+
+<script>
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbwyWc45eMoUlWn904Wa9IyuHcoEDwALSbNa4Sit6BZp7MC9WRiEOXj8bskuFMB1Cqml/exec";
+
+document.getElementById('checkout-form').addEventListener('submit',function(e){
+
+e.preventDefault();
+
+const lastOrderTime=localStorage.getItem('last_order_timestamp');
+const now=new Date().getTime();
+const cooldownPeriod=24*60*60*1000;
+
+if(lastOrderTime&&(now-lastOrderTime<cooldownPeriod)){
+
+const remainingHours=Math.ceil(
+(cooldownPeriod-(now-lastOrderTime))/(1000*60*60)
+);
+
+alert(
+"Aapne already pichle 24 ghanto ke andar order submit kar diya hai! Kripya lagbhag "+
+remainingHours+
+" ghante baad dobara koshish karein."
+);
+
+return;
+}
+
+const addressInput=document.getElementById('address').value.trim();
+
+if(addressInput.length<10){
+
+alert(
+"Kripya apna poora aur sahi delivery address (House No., Area, Landmark ke sath) darj karein."
+);
+
+return;
+}
+
+const repeatedPattern=/(.)\1{4,}/;
+
+if(repeatedPattern.test(addressInput)){
+
+alert(
+"Aapka address invalid lag raha hai. Kripya valid address dalein jisme meaningful words ho."
+);
+
+return;
+}
+
+const submitBtn=document.getElementById('submit-btn');
+
+submitBtn.disabled=true;
+
+submitBtn.innerHTML=
+'<i class="fa-solid fa-spinner fa-spin"></i> SUBMITTING...';
+
+const formData=new FormData(this);
+
+fetch(SCRIPT_URL,{
+method:'POST',
+mode:'no-cors',
+body:formData
+})
+.then(function(){
+
+localStorage.setItem(
+'last_order_timestamp',
+new Date().getTime()
+);
+
+window.location.href='thank-you.html';
+
+})
+.catch(function(error){
+
+console.error(
+'Google Sheets submission error:',
+error
+);
+
+submitBtn.disabled=false;
+
+submitBtn.innerHTML=
+'<i class="fa-solid fa-paper-plane"></i> SUBMIT NOW';
+
+alert(
+'Form submit nahi ho paya. Kripya dobara try karein.'
+);
+
+});
+
+});
+</script>
 
 </body>
 </html>
